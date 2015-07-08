@@ -1,0 +1,904 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5410E5E81B314C630087AC5D /* ZapLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E5E71B314C630087AC5D /* ZapLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5410E5EE1B314C640087AC5D /* ZapLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E5E21B314C630087AC5D /* ZapLib.framework */; };
+		5410E5F51B314C640087AC5D /* ZapLibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5410E5F41B314C640087AC5D /* ZapLibTests.m */; };
+		5410E79D1B3168780087AC5D /* Android.mk in Resources */ = {isa = PBXBuildFile; fileRef = 5410E7561B3168780087AC5D /* Android.mk */; };
+		5410E79E1B3168780087AC5D /* CvOrcImageContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E7581B3168780087AC5D /* CvOrcImageContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5410E79F1B3168780087AC5D /* EmailStat.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E7591B3168780087AC5D /* EmailStat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5410E7A01B3168780087AC5D /* FilterOcrCardResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E75A1B3168780087AC5D /* FilterOcrCardResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5410E7A11B3168780087AC5D /* TessHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E75B1B3168780087AC5D /* TessHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5410E7A21B3168780087AC5D /* TessResultParseCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E75C1B3168780087AC5D /* TessResultParseCard.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5410E7A31B3168780087AC5D /* TextConfidence.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E75D1B3168780087AC5D /* TextConfidence.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5410E7B11B3168780087AC5D /* eng.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 5410E7761B3168780087AC5D /* eng.traineddata */; };
+		5410E7C41B3168780087AC5D /* CvOcrImageProcess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7951B3168780087AC5D /* CvOcrImageProcess.cpp */; };
+		5410E7C51B3168780087AC5D /* CvOcrImageProcess.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E7961B3168780087AC5D /* CvOcrImageProcess.h */; };
+		5410E7C61B3168780087AC5D /* CvOrcImageContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7971B3168780087AC5D /* CvOrcImageContainer.cpp */; };
+		5410E7C71B3168780087AC5D /* EmailStat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7981B3168780087AC5D /* EmailStat.cpp */; };
+		5410E7C81B3168780087AC5D /* FilterOcrCardResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7991B3168780087AC5D /* FilterOcrCardResult.cpp */; };
+		5410E7C91B3168780087AC5D /* TessHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E79A1B3168780087AC5D /* TessHelper.cpp */; };
+		5410E7CA1B3168780087AC5D /* TessResultParseCard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E79B1B3168780087AC5D /* TessResultParseCard.cpp */; };
+		5410E7CB1B3168780087AC5D /* TextConfidence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E79C1B3168780087AC5D /* TextConfidence.cpp */; };
+		5410E8161B3168A40087AC5D /* CvDetectCard.1 in Resources */ = {isa = PBXBuildFile; fileRef = 5410E7D91B3168A40087AC5D /* CvDetectCard.1 */; };
+		5410E81B1B3168A40087AC5D /* binarizewolfjolion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7E71B3168A40087AC5D /* binarizewolfjolion.cpp */; };
+		5410E81C1B3168A40087AC5D /* binarizewolfjolion.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E7E81B3168A40087AC5D /* binarizewolfjolion.h */; };
+		5410E8211B3168A40087AC5D /* CardTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7ED1B3168A40087AC5D /* CardTracker.cpp */; };
+		5410E8221B3168A40087AC5D /* CardTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E7EE1B3168A40087AC5D /* CardTracker.h */; };
+		5410E8231B3168A40087AC5D /* CVUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E7EF1B3168A40087AC5D /* CVUtil.h */; };
+		5410E8261B3168A40087AC5D /* DetectAt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7F21B3168A40087AC5D /* DetectAt.cpp */; };
+		5410E8271B3168A40087AC5D /* DetectAt.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E7F31B3168A40087AC5D /* DetectAt.h */; };
+		5410E8281B3168A40087AC5D /* DetectAtJni.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7F41B3168A40087AC5D /* DetectAtJni.cpp */; };
+		5410E8291B3168A40087AC5D /* DetectCardJni.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7F51B3168A40087AC5D /* DetectCardJni.cpp */; };
+		5410E82A1B3168A40087AC5D /* DetectCardJni.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E7F61B3168A40087AC5D /* DetectCardJni.h */; };
+		5410E82B1B3168A40087AC5D /* DetectCardUnity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7F71B3168A40087AC5D /* DetectCardUnity.cpp */; };
+		5410E82C1B3168A40087AC5D /* detectrect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7F81B3168A40087AC5D /* detectrect.cpp */; };
+		5410E82D1B3168A40087AC5D /* detectrect.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5410E7F91B3168A40087AC5D /* detectrect.hpp */; };
+		5410E82E1B3168A40087AC5D /* DetectTextBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7FA1B3168A40087AC5D /* DetectTextBlock.cpp */; };
+		5410E82F1B3168A40087AC5D /* DetectTextBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E7FB1B3168A40087AC5D /* DetectTextBlock.h */; };
+		5410E8301B3168A40087AC5D /* filetools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7FC1B3168A40087AC5D /* filetools.cpp */; };
+		5410E8311B3168A40087AC5D /* filetools.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5410E7FD1B3168A40087AC5D /* filetools.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		5410E8321B3168A50087AC5D /* guitools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7FE1B3168A40087AC5D /* guitools.cpp */; };
+		5410E8331B3168A50087AC5D /* guitools.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5410E7FF1B3168A40087AC5D /* guitools.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		5410E8341B3168A50087AC5D /* guitools_cv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E8001B3168A40087AC5D /* guitools_cv.cpp */; };
+		5410E8351B3168A50087AC5D /* guitools_cv.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8011B3168A40087AC5D /* guitools_cv.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5410E8381B3168A50087AC5D /* ImageMarker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E8041B3168A40087AC5D /* ImageMarker.cpp */; };
+		5410E8391B3168A50087AC5D /* ImageMarker.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8051B3168A40087AC5D /* ImageMarker.h */; };
+		5410E83A1B3168A50087AC5D /* imgtools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E8061B3168A40087AC5D /* imgtools.cpp */; };
+		5410E83B1B3168A50087AC5D /* lsd2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E8071B3168A40087AC5D /* lsd2.cpp */; };
+		5410E83C1B3168A50087AC5D /* lsd2.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8081B3168A40087AC5D /* lsd2.hpp */; };
+		5410E83D1B3168A50087AC5D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E8091B3168A40087AC5D /* main.cpp */; };
+		5410E83E1B3168A50087AC5D /* preprocessimg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E80A1B3168A40087AC5D /* preprocessimg.cpp */; };
+		5410E83F1B3168A50087AC5D /* preprocessimg.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5410E80B1B3168A40087AC5D /* preprocessimg.hpp */; };
+		5410E8421B3168A50087AC5D /* StillDCardJni.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E80E1B3168A40087AC5D /* StillDCardJni.cpp */; };
+		5410E8431B3168A50087AC5D /* StillDCardJni.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E80F1B3168A40087AC5D /* StillDCardJni.h */; };
+		5410E8441B3168A50087AC5D /* StillDCardJniConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8101B3168A40087AC5D /* StillDCardJniConstant.h */; };
+		5410E8461B3168A50087AC5D /* zMyLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E8121B3168A40087AC5D /* zMyLine.cpp */; };
+		5410E8471B3168A50087AC5D /* zMyLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8131B3168A40087AC5D /* zMyLine.h */; };
+		5410E8481B3168A50087AC5D /* zPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8141B3168A40087AC5D /* zPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5410E8491B3168A50087AC5D /* zTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8151B3168A40087AC5D /* zTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5410E85E1B3169330087AC5D /* libopencv_video.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E8501B3169330087AC5D /* libopencv_video.3.0.0.dylib */; };
+		5410E85F1B3169330087AC5D /* libopencv_videoio.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E8511B3169330087AC5D /* libopencv_videoio.3.0.0.dylib */; };
+		5410E8601B3169330087AC5D /* libopencv_ml.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E8521B3169330087AC5D /* libopencv_ml.3.0.0.dylib */; };
+		5410E8611B3169330087AC5D /* libtesseract.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E8531B3169330087AC5D /* libtesseract.3.dylib */; };
+		5410E8621B3169330087AC5D /* liblept.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E8541B3169330087AC5D /* liblept.4.dylib */; };
+		5410E8631B3169330087AC5D /* libopencv_photo.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E8551B3169330087AC5D /* libopencv_photo.3.0.0.dylib */; };
+		5410E8641B3169330087AC5D /* libopencv_objdetect.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E8561B3169330087AC5D /* libopencv_objdetect.3.0.0.dylib */; };
+		5410E8651B3169330087AC5D /* libopencv_flann.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E8571B3169330087AC5D /* libopencv_flann.3.0.0.dylib */; };
+		5410E8661B3169330087AC5D /* libopencv_highgui.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E8581B3169330087AC5D /* libopencv_highgui.3.0.0.dylib */; };
+		5410E8671B3169330087AC5D /* libopencv_imgcodecs.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E8591B3169330087AC5D /* libopencv_imgcodecs.3.0.0.dylib */; };
+		5410E8681B3169330087AC5D /* libopencv_imgproc.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E85A1B3169330087AC5D /* libopencv_imgproc.3.0.0.dylib */; };
+		5410E8691B3169330087AC5D /* libopencv_core.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E85B1B3169330087AC5D /* libopencv_core.3.0.0.dylib */; };
+		5410E86A1B3169330087AC5D /* libopencv_features2d.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E85C1B3169330087AC5D /* libopencv_features2d.3.0.0.dylib */; };
+		5410E8771B31698A0087AC5D /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E86D1B31698A0087AC5D /* Application.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5410E8781B31698A0087AC5D /* factory.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E86E1B31698A0087AC5D /* factory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5410E8791B31698A0087AC5D /* optionparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E86F1B31698A0087AC5D /* optionparser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5410E87A1B31698A0087AC5D /* SimpleStat.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8701B31698A0087AC5D /* SimpleStat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5410E87C1B31698A0087AC5D /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E8751B31698A0087AC5D /* Application.cpp */; };
+		5410E87D1B31698A0087AC5D /* SimpleStat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E8761B31698A0087AC5D /* SimpleStat.cpp */; };
+		54A0D9431B4CC9020036CB05 /* CardTrackerDetectAt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54A0D93D1B4CC9020036CB05 /* CardTrackerDetectAt.cpp */; };
+		54A0D9441B4CC9020036CB05 /* CardTrackerDetectAt.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A0D93E1B4CC9020036CB05 /* CardTrackerDetectAt.h */; };
+		54A0D9451B4CC9020036CB05 /* CardTrackerFeature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54A0D93F1B4CC9020036CB05 /* CardTrackerFeature.cpp */; };
+		54A0D9461B4CC9020036CB05 /* CardTrackerFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A0D9401B4CC9020036CB05 /* CardTrackerFeature.h */; };
+		54A0D9471B4CC9020036CB05 /* Matching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54A0D9411B4CC9020036CB05 /* Matching.cpp */; };
+		54A0D9481B4CC9020036CB05 /* Matching.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A0D9421B4CC9020036CB05 /* Matching.h */; };
+		54A0D9541B4CCA320036CB05 /* Android.mk in Resources */ = {isa = PBXBuildFile; fileRef = 54A0D94C1B4CCA320036CB05 /* Android.mk */; };
+		54A0D9551B4CCA320036CB05 /* threadqueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A0D94E1B4CCA320036CB05 /* threadqueue.h */; };
+		54A0D9561B4CCA320036CB05 /* Android.mk in Resources */ = {isa = PBXBuildFile; fileRef = 54A0D9511B4CCA320036CB05 /* Android.mk */; };
+		54A0D9571B4CCA320036CB05 /* threadqueue.c in Sources */ = {isa = PBXBuildFile; fileRef = 54A0D9531B4CCA320036CB05 /* threadqueue.c */; };
+		54A0D9591B4CCAAB0036CB05 /* libopencv_calib3d.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A0D9581B4CCAAB0036CB05 /* libopencv_calib3d.3.0.0.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5410E5EF1B314C640087AC5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5410E5D91B314C630087AC5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5410E5E11B314C630087AC5D;
+			remoteInfo = ZapLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5410E5E21B314C630087AC5D /* ZapLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZapLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5410E5E61B314C630087AC5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5410E5E71B314C630087AC5D /* ZapLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZapLib.h; sourceTree = "<group>"; };
+		5410E5ED1B314C640087AC5D /* ZapLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZapLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5410E5F31B314C640087AC5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5410E5F41B314C640087AC5D /* ZapLibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZapLibTests.m; sourceTree = "<group>"; };
+		5410E7561B3168780087AC5D /* Android.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Android.mk; sourceTree = "<group>"; };
+		5410E7581B3168780087AC5D /* CvOrcImageContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CvOrcImageContainer.h; sourceTree = "<group>"; };
+		5410E7591B3168780087AC5D /* EmailStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailStat.h; sourceTree = "<group>"; };
+		5410E75A1B3168780087AC5D /* FilterOcrCardResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterOcrCardResult.h; sourceTree = "<group>"; };
+		5410E75B1B3168780087AC5D /* TessHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TessHelper.h; sourceTree = "<group>"; };
+		5410E75C1B3168780087AC5D /* TessResultParseCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TessResultParseCard.h; sourceTree = "<group>"; };
+		5410E75D1B3168780087AC5D /* TextConfidence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextConfidence.h; sourceTree = "<group>"; };
+		5410E7761B3168780087AC5D /* eng.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = eng.traineddata; sourceTree = "<group>"; };
+		5410E7951B3168780087AC5D /* CvOcrImageProcess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CvOcrImageProcess.cpp; sourceTree = "<group>"; };
+		5410E7961B3168780087AC5D /* CvOcrImageProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CvOcrImageProcess.h; sourceTree = "<group>"; };
+		5410E7971B3168780087AC5D /* CvOrcImageContainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CvOrcImageContainer.cpp; sourceTree = "<group>"; };
+		5410E7981B3168780087AC5D /* EmailStat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EmailStat.cpp; sourceTree = "<group>"; };
+		5410E7991B3168780087AC5D /* FilterOcrCardResult.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FilterOcrCardResult.cpp; sourceTree = "<group>"; };
+		5410E79A1B3168780087AC5D /* TessHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TessHelper.cpp; sourceTree = "<group>"; };
+		5410E79B1B3168780087AC5D /* TessResultParseCard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TessResultParseCard.cpp; sourceTree = "<group>"; };
+		5410E79C1B3168780087AC5D /* TextConfidence.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextConfidence.cpp; sourceTree = "<group>"; };
+		5410E7D91B3168A40087AC5D /* CvDetectCard.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = CvDetectCard.1; sourceTree = "<group>"; };
+		5410E7E71B3168A40087AC5D /* binarizewolfjolion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = binarizewolfjolion.cpp; sourceTree = "<group>"; };
+		5410E7E81B3168A40087AC5D /* binarizewolfjolion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binarizewolfjolion.h; sourceTree = "<group>"; };
+		5410E7ED1B3168A40087AC5D /* CardTracker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CardTracker.cpp; sourceTree = "<group>"; };
+		5410E7EE1B3168A40087AC5D /* CardTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardTracker.h; sourceTree = "<group>"; };
+		5410E7EF1B3168A40087AC5D /* CVUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVUtil.h; sourceTree = "<group>"; };
+		5410E7F21B3168A40087AC5D /* DetectAt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DetectAt.cpp; sourceTree = "<group>"; };
+		5410E7F31B3168A40087AC5D /* DetectAt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetectAt.h; sourceTree = "<group>"; };
+		5410E7F41B3168A40087AC5D /* DetectAtJni.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DetectAtJni.cpp; sourceTree = "<group>"; };
+		5410E7F51B3168A40087AC5D /* DetectCardJni.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DetectCardJni.cpp; sourceTree = "<group>"; };
+		5410E7F61B3168A40087AC5D /* DetectCardJni.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetectCardJni.h; sourceTree = "<group>"; };
+		5410E7F71B3168A40087AC5D /* DetectCardUnity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DetectCardUnity.cpp; sourceTree = "<group>"; };
+		5410E7F81B3168A40087AC5D /* detectrect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = detectrect.cpp; sourceTree = "<group>"; };
+		5410E7F91B3168A40087AC5D /* detectrect.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = detectrect.hpp; sourceTree = "<group>"; };
+		5410E7FA1B3168A40087AC5D /* DetectTextBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DetectTextBlock.cpp; sourceTree = "<group>"; };
+		5410E7FB1B3168A40087AC5D /* DetectTextBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetectTextBlock.h; sourceTree = "<group>"; };
+		5410E7FC1B3168A40087AC5D /* filetools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = filetools.cpp; sourceTree = "<group>"; };
+		5410E7FD1B3168A40087AC5D /* filetools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = filetools.hpp; sourceTree = "<group>"; };
+		5410E7FE1B3168A40087AC5D /* guitools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = guitools.cpp; sourceTree = "<group>"; };
+		5410E7FF1B3168A40087AC5D /* guitools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = guitools.hpp; sourceTree = "<group>"; };
+		5410E8001B3168A40087AC5D /* guitools_cv.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = guitools_cv.cpp; sourceTree = "<group>"; };
+		5410E8011B3168A40087AC5D /* guitools_cv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = guitools_cv.h; sourceTree = "<group>"; };
+		5410E8041B3168A40087AC5D /* ImageMarker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageMarker.cpp; sourceTree = "<group>"; };
+		5410E8051B3168A40087AC5D /* ImageMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMarker.h; sourceTree = "<group>"; };
+		5410E8061B3168A40087AC5D /* imgtools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgtools.cpp; sourceTree = "<group>"; };
+		5410E8071B3168A40087AC5D /* lsd2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lsd2.cpp; sourceTree = "<group>"; };
+		5410E8081B3168A40087AC5D /* lsd2.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lsd2.hpp; sourceTree = "<group>"; };
+		5410E8091B3168A40087AC5D /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5410E80A1B3168A40087AC5D /* preprocessimg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = preprocessimg.cpp; sourceTree = "<group>"; };
+		5410E80B1B3168A40087AC5D /* preprocessimg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = preprocessimg.hpp; sourceTree = "<group>"; };
+		5410E80E1B3168A40087AC5D /* StillDCardJni.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StillDCardJni.cpp; sourceTree = "<group>"; };
+		5410E80F1B3168A40087AC5D /* StillDCardJni.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StillDCardJni.h; sourceTree = "<group>"; };
+		5410E8101B3168A40087AC5D /* StillDCardJniConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StillDCardJniConstant.h; sourceTree = "<group>"; };
+		5410E8121B3168A40087AC5D /* zMyLine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = zMyLine.cpp; sourceTree = "<group>"; };
+		5410E8131B3168A40087AC5D /* zMyLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zMyLine.h; sourceTree = "<group>"; };
+		5410E8141B3168A40087AC5D /* zPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zPlatform.h; sourceTree = "<group>"; };
+		5410E8151B3168A40087AC5D /* zTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zTypes.h; sourceTree = "<group>"; };
+		5410E8501B3169330087AC5D /* libopencv_video.3.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_video.3.0.0.dylib; path = /Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib/libopencv_video.3.0.0.dylib; sourceTree = "<absolute>"; };
+		5410E8511B3169330087AC5D /* libopencv_videoio.3.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_videoio.3.0.0.dylib; path = /Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib/libopencv_videoio.3.0.0.dylib; sourceTree = "<absolute>"; };
+		5410E8521B3169330087AC5D /* libopencv_ml.3.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_ml.3.0.0.dylib; path = /Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib/libopencv_ml.3.0.0.dylib; sourceTree = "<absolute>"; };
+		5410E8531B3169330087AC5D /* libtesseract.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtesseract.3.dylib; path = /Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib/libtesseract.3.dylib; sourceTree = "<absolute>"; };
+		5410E8541B3169330087AC5D /* liblept.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liblept.4.dylib; path = /Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib/liblept.4.dylib; sourceTree = "<absolute>"; };
+		5410E8551B3169330087AC5D /* libopencv_photo.3.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_photo.3.0.0.dylib; path = /Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib/libopencv_photo.3.0.0.dylib; sourceTree = "<absolute>"; };
+		5410E8561B3169330087AC5D /* libopencv_objdetect.3.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_objdetect.3.0.0.dylib; path = /Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib/libopencv_objdetect.3.0.0.dylib; sourceTree = "<absolute>"; };
+		5410E8571B3169330087AC5D /* libopencv_flann.3.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_flann.3.0.0.dylib; path = /Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib/libopencv_flann.3.0.0.dylib; sourceTree = "<absolute>"; };
+		5410E8581B3169330087AC5D /* libopencv_highgui.3.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_highgui.3.0.0.dylib; path = /Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib/libopencv_highgui.3.0.0.dylib; sourceTree = "<absolute>"; };
+		5410E8591B3169330087AC5D /* libopencv_imgcodecs.3.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgcodecs.3.0.0.dylib; path = /Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib/libopencv_imgcodecs.3.0.0.dylib; sourceTree = "<absolute>"; };
+		5410E85A1B3169330087AC5D /* libopencv_imgproc.3.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgproc.3.0.0.dylib; path = /Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib/libopencv_imgproc.3.0.0.dylib; sourceTree = "<absolute>"; };
+		5410E85B1B3169330087AC5D /* libopencv_core.3.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.3.0.0.dylib; path = /Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib/libopencv_core.3.0.0.dylib; sourceTree = "<absolute>"; };
+		5410E85C1B3169330087AC5D /* libopencv_features2d.3.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_features2d.3.0.0.dylib; path = /Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib/libopencv_features2d.3.0.0.dylib; sourceTree = "<absolute>"; };
+		5410E86D1B31698A0087AC5D /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		5410E86E1B31698A0087AC5D /* factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = factory.h; sourceTree = "<group>"; };
+		5410E86F1B31698A0087AC5D /* optionparser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = optionparser.h; sourceTree = "<group>"; };
+		5410E8701B31698A0087AC5D /* SimpleStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleStat.h; sourceTree = "<group>"; };
+		5410E8751B31698A0087AC5D /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
+		5410E8761B31698A0087AC5D /* SimpleStat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleStat.cpp; sourceTree = "<group>"; };
+		54A0D93D1B4CC9020036CB05 /* CardTrackerDetectAt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CardTrackerDetectAt.cpp; sourceTree = "<group>"; };
+		54A0D93E1B4CC9020036CB05 /* CardTrackerDetectAt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardTrackerDetectAt.h; sourceTree = "<group>"; };
+		54A0D93F1B4CC9020036CB05 /* CardTrackerFeature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CardTrackerFeature.cpp; sourceTree = "<group>"; };
+		54A0D9401B4CC9020036CB05 /* CardTrackerFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardTrackerFeature.h; sourceTree = "<group>"; };
+		54A0D9411B4CC9020036CB05 /* Matching.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matching.cpp; sourceTree = "<group>"; };
+		54A0D9421B4CC9020036CB05 /* Matching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matching.h; sourceTree = "<group>"; };
+		54A0D94C1B4CCA320036CB05 /* Android.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Android.mk; sourceTree = "<group>"; };
+		54A0D94E1B4CCA320036CB05 /* threadqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = threadqueue.h; sourceTree = "<group>"; };
+		54A0D9511B4CCA320036CB05 /* Android.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Android.mk; sourceTree = "<group>"; };
+		54A0D9531B4CCA320036CB05 /* threadqueue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = threadqueue.c; sourceTree = "<group>"; };
+		54A0D9581B4CCAAB0036CB05 /* libopencv_calib3d.3.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_calib3d.3.0.0.dylib; path = ../../../../../../usr/local/lib/libopencv_calib3d.3.0.0.dylib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5410E5DE1B314C630087AC5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5410E8641B3169330087AC5D /* libopencv_objdetect.3.0.0.dylib in Frameworks */,
+				5410E8611B3169330087AC5D /* libtesseract.3.dylib in Frameworks */,
+				5410E8651B3169330087AC5D /* libopencv_flann.3.0.0.dylib in Frameworks */,
+				5410E8681B3169330087AC5D /* libopencv_imgproc.3.0.0.dylib in Frameworks */,
+				5410E8661B3169330087AC5D /* libopencv_highgui.3.0.0.dylib in Frameworks */,
+				5410E8621B3169330087AC5D /* liblept.4.dylib in Frameworks */,
+				5410E8601B3169330087AC5D /* libopencv_ml.3.0.0.dylib in Frameworks */,
+				54A0D9591B4CCAAB0036CB05 /* libopencv_calib3d.3.0.0.dylib in Frameworks */,
+				5410E85F1B3169330087AC5D /* libopencv_videoio.3.0.0.dylib in Frameworks */,
+				5410E86A1B3169330087AC5D /* libopencv_features2d.3.0.0.dylib in Frameworks */,
+				5410E8671B3169330087AC5D /* libopencv_imgcodecs.3.0.0.dylib in Frameworks */,
+				5410E85E1B3169330087AC5D /* libopencv_video.3.0.0.dylib in Frameworks */,
+				5410E8631B3169330087AC5D /* libopencv_photo.3.0.0.dylib in Frameworks */,
+				5410E8691B3169330087AC5D /* libopencv_core.3.0.0.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5410E5EA1B314C640087AC5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5410E5EE1B314C640087AC5D /* ZapLib.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5410E5D81B314C630087AC5D = {
+			isa = PBXGroup;
+			children = (
+				5410E85D1B3169330087AC5D /* library */,
+				5410E5E41B314C630087AC5D /* ZapLib */,
+				5410E5F11B314C640087AC5D /* ZapLibTests */,
+				5410E5E31B314C630087AC5D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5410E5E31B314C630087AC5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5410E5E21B314C630087AC5D /* ZapLib.framework */,
+				5410E5ED1B314C640087AC5D /* ZapLibTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5410E5E41B314C630087AC5D /* ZapLib */ = {
+			isa = PBXGroup;
+			children = (
+				54A0D94B1B4CCA320036CB05 /* ZapBase */,
+				5410E86B1B31698A0087AC5D /* ZapBatchTest */,
+				5410E7D81B3168A40087AC5D /* CvDetectCard */,
+				5410E7551B3168780087AC5D /* ZapOcr */,
+				5410E5E71B314C630087AC5D /* ZapLib.h */,
+				5410E5E51B314C630087AC5D /* Supporting Files */,
+			);
+			path = ZapLib;
+			sourceTree = "<group>";
+		};
+		5410E5E51B314C630087AC5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5410E5E61B314C630087AC5D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5410E5F11B314C640087AC5D /* ZapLibTests */ = {
+			isa = PBXGroup;
+			children = (
+				5410E5F41B314C640087AC5D /* ZapLibTests.m */,
+				5410E5F21B314C640087AC5D /* Supporting Files */,
+			);
+			path = ZapLibTests;
+			sourceTree = "<group>";
+		};
+		5410E5F21B314C640087AC5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5410E5F31B314C640087AC5D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5410E7551B3168780087AC5D /* ZapOcr */ = {
+			isa = PBXGroup;
+			children = (
+				5410E7561B3168780087AC5D /* Android.mk */,
+				5410E7571B3168780087AC5D /* include */,
+				5410E7741B3168780087AC5D /* resource */,
+				5410E7941B3168780087AC5D /* src */,
+			);
+			name = ZapOcr;
+			path = ../../../../androidstudio/ZappointPlus/subm_CvDetectCard/ZapOcr;
+			sourceTree = "<group>";
+		};
+		5410E7571B3168780087AC5D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				5410E7581B3168780087AC5D /* CvOrcImageContainer.h */,
+				5410E7591B3168780087AC5D /* EmailStat.h */,
+				5410E75A1B3168780087AC5D /* FilterOcrCardResult.h */,
+				5410E75B1B3168780087AC5D /* TessHelper.h */,
+				5410E75C1B3168780087AC5D /* TessResultParseCard.h */,
+				5410E75D1B3168780087AC5D /* TextConfidence.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		5410E7741B3168780087AC5D /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				5410E7751B3168780087AC5D /* tessdata */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		5410E7751B3168780087AC5D /* tessdata */ = {
+			isa = PBXGroup;
+			children = (
+				5410E7761B3168780087AC5D /* eng.traineddata */,
+			);
+			path = tessdata;
+			sourceTree = "<group>";
+		};
+		5410E7941B3168780087AC5D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				5410E7951B3168780087AC5D /* CvOcrImageProcess.cpp */,
+				5410E7961B3168780087AC5D /* CvOcrImageProcess.h */,
+				5410E7971B3168780087AC5D /* CvOrcImageContainer.cpp */,
+				5410E7981B3168780087AC5D /* EmailStat.cpp */,
+				5410E7991B3168780087AC5D /* FilterOcrCardResult.cpp */,
+				5410E79A1B3168780087AC5D /* TessHelper.cpp */,
+				5410E79B1B3168780087AC5D /* TessResultParseCard.cpp */,
+				5410E79C1B3168780087AC5D /* TextConfidence.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		5410E7D81B3168A40087AC5D /* CvDetectCard */ = {
+			isa = PBXGroup;
+			children = (
+				5410E7D91B3168A40087AC5D /* CvDetectCard.1 */,
+				5410E7E61B3168A40087AC5D /* src */,
+			);
+			name = CvDetectCard;
+			path = ../../../../androidstudio/ZappointPlus/subm_CvDetectCard/CvDetectCard;
+			sourceTree = "<group>";
+		};
+		5410E7E61B3168A40087AC5D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				54A0D93D1B4CC9020036CB05 /* CardTrackerDetectAt.cpp */,
+				54A0D93E1B4CC9020036CB05 /* CardTrackerDetectAt.h */,
+				54A0D93F1B4CC9020036CB05 /* CardTrackerFeature.cpp */,
+				54A0D9401B4CC9020036CB05 /* CardTrackerFeature.h */,
+				54A0D9411B4CC9020036CB05 /* Matching.cpp */,
+				54A0D9421B4CC9020036CB05 /* Matching.h */,
+				5410E7E71B3168A40087AC5D /* binarizewolfjolion.cpp */,
+				5410E7E81B3168A40087AC5D /* binarizewolfjolion.h */,
+				5410E7ED1B3168A40087AC5D /* CardTracker.cpp */,
+				5410E7EE1B3168A40087AC5D /* CardTracker.h */,
+				5410E7EF1B3168A40087AC5D /* CVUtil.h */,
+				5410E7F21B3168A40087AC5D /* DetectAt.cpp */,
+				5410E7F31B3168A40087AC5D /* DetectAt.h */,
+				5410E7F41B3168A40087AC5D /* DetectAtJni.cpp */,
+				5410E7F51B3168A40087AC5D /* DetectCardJni.cpp */,
+				5410E7F61B3168A40087AC5D /* DetectCardJni.h */,
+				5410E7F71B3168A40087AC5D /* DetectCardUnity.cpp */,
+				5410E7F81B3168A40087AC5D /* detectrect.cpp */,
+				5410E7F91B3168A40087AC5D /* detectrect.hpp */,
+				5410E7FA1B3168A40087AC5D /* DetectTextBlock.cpp */,
+				5410E7FB1B3168A40087AC5D /* DetectTextBlock.h */,
+				5410E7FC1B3168A40087AC5D /* filetools.cpp */,
+				5410E7FD1B3168A40087AC5D /* filetools.hpp */,
+				5410E7FE1B3168A40087AC5D /* guitools.cpp */,
+				5410E7FF1B3168A40087AC5D /* guitools.hpp */,
+				5410E8001B3168A40087AC5D /* guitools_cv.cpp */,
+				5410E8011B3168A40087AC5D /* guitools_cv.h */,
+				5410E8041B3168A40087AC5D /* ImageMarker.cpp */,
+				5410E8051B3168A40087AC5D /* ImageMarker.h */,
+				5410E8061B3168A40087AC5D /* imgtools.cpp */,
+				5410E8071B3168A40087AC5D /* lsd2.cpp */,
+				5410E8081B3168A40087AC5D /* lsd2.hpp */,
+				5410E8091B3168A40087AC5D /* main.cpp */,
+				5410E80A1B3168A40087AC5D /* preprocessimg.cpp */,
+				5410E80B1B3168A40087AC5D /* preprocessimg.hpp */,
+				5410E80E1B3168A40087AC5D /* StillDCardJni.cpp */,
+				5410E80F1B3168A40087AC5D /* StillDCardJni.h */,
+				5410E8101B3168A40087AC5D /* StillDCardJniConstant.h */,
+				5410E8121B3168A40087AC5D /* zMyLine.cpp */,
+				5410E8131B3168A40087AC5D /* zMyLine.h */,
+				5410E8141B3168A40087AC5D /* zPlatform.h */,
+				5410E8151B3168A40087AC5D /* zTypes.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		5410E85D1B3169330087AC5D /* library */ = {
+			isa = PBXGroup;
+			children = (
+				54A0D9581B4CCAAB0036CB05 /* libopencv_calib3d.3.0.0.dylib */,
+				5410E8501B3169330087AC5D /* libopencv_video.3.0.0.dylib */,
+				5410E8511B3169330087AC5D /* libopencv_videoio.3.0.0.dylib */,
+				5410E8521B3169330087AC5D /* libopencv_ml.3.0.0.dylib */,
+				5410E8531B3169330087AC5D /* libtesseract.3.dylib */,
+				5410E8541B3169330087AC5D /* liblept.4.dylib */,
+				5410E8551B3169330087AC5D /* libopencv_photo.3.0.0.dylib */,
+				5410E8561B3169330087AC5D /* libopencv_objdetect.3.0.0.dylib */,
+				5410E8571B3169330087AC5D /* libopencv_flann.3.0.0.dylib */,
+				5410E8581B3169330087AC5D /* libopencv_highgui.3.0.0.dylib */,
+				5410E8591B3169330087AC5D /* libopencv_imgcodecs.3.0.0.dylib */,
+				5410E85A1B3169330087AC5D /* libopencv_imgproc.3.0.0.dylib */,
+				5410E85B1B3169330087AC5D /* libopencv_core.3.0.0.dylib */,
+				5410E85C1B3169330087AC5D /* libopencv_features2d.3.0.0.dylib */,
+			);
+			name = library;
+			path = ../ThreePartyTool;
+			sourceTree = "<group>";
+		};
+		5410E86B1B31698A0087AC5D /* ZapBatchTest */ = {
+			isa = PBXGroup;
+			children = (
+				5410E86C1B31698A0087AC5D /* include */,
+				5410E8741B31698A0087AC5D /* src */,
+			);
+			name = ZapBatchTest;
+			path = ../../../../androidstudio/ZappointPlus/subm_CvDetectCard/ZapBatchTest;
+			sourceTree = "<group>";
+		};
+		5410E86C1B31698A0087AC5D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				5410E86D1B31698A0087AC5D /* Application.h */,
+				5410E86E1B31698A0087AC5D /* factory.h */,
+				5410E86F1B31698A0087AC5D /* optionparser.h */,
+				5410E8701B31698A0087AC5D /* SimpleStat.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		5410E8741B31698A0087AC5D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				5410E8751B31698A0087AC5D /* Application.cpp */,
+				5410E8761B31698A0087AC5D /* SimpleStat.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		54A0D94B1B4CCA320036CB05 /* ZapBase */ = {
+			isa = PBXGroup;
+			children = (
+				54A0D94C1B4CCA320036CB05 /* Android.mk */,
+				54A0D94D1B4CCA320036CB05 /* include */,
+				54A0D94F1B4CCA320036CB05 /* platform */,
+				54A0D9521B4CCA320036CB05 /* src */,
+			);
+			name = ZapBase;
+			path = ../../../../androidstudio/ZappointPlus/subm_CvDetectCard/ZapBase;
+			sourceTree = "<group>";
+		};
+		54A0D94D1B4CCA320036CB05 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				54A0D94E1B4CCA320036CB05 /* threadqueue.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		54A0D94F1B4CCA320036CB05 /* platform */ = {
+			isa = PBXGroup;
+			children = (
+				54A0D9501B4CCA320036CB05 /* android */,
+			);
+			path = platform;
+			sourceTree = "<group>";
+		};
+		54A0D9501B4CCA320036CB05 /* android */ = {
+			isa = PBXGroup;
+			children = (
+				54A0D9511B4CCA320036CB05 /* Android.mk */,
+			);
+			path = android;
+			sourceTree = "<group>";
+		};
+		54A0D9521B4CCA320036CB05 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				54A0D9531B4CCA320036CB05 /* threadqueue.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5410E5DF1B314C630087AC5D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54A0D9441B4CC9020036CB05 /* CardTrackerDetectAt.h in Headers */,
+				5410E8431B3168A50087AC5D /* StillDCardJni.h in Headers */,
+				5410E7A11B3168780087AC5D /* TessHelper.h in Headers */,
+				5410E8231B3168A40087AC5D /* CVUtil.h in Headers */,
+				54A0D9481B4CC9020036CB05 /* Matching.h in Headers */,
+				5410E8331B3168A50087AC5D /* guitools.hpp in Headers */,
+				5410E7A31B3168780087AC5D /* TextConfidence.h in Headers */,
+				5410E83F1B3168A50087AC5D /* preprocessimg.hpp in Headers */,
+				5410E79E1B3168780087AC5D /* CvOrcImageContainer.h in Headers */,
+				5410E8481B3168A50087AC5D /* zPlatform.h in Headers */,
+				5410E8221B3168A40087AC5D /* CardTracker.h in Headers */,
+				5410E8471B3168A50087AC5D /* zMyLine.h in Headers */,
+				5410E8491B3168A50087AC5D /* zTypes.h in Headers */,
+				5410E87A1B31698A0087AC5D /* SimpleStat.h in Headers */,
+				5410E82D1B3168A40087AC5D /* detectrect.hpp in Headers */,
+				5410E8781B31698A0087AC5D /* factory.h in Headers */,
+				5410E8791B31698A0087AC5D /* optionparser.h in Headers */,
+				5410E8351B3168A50087AC5D /* guitools_cv.h in Headers */,
+				54A0D9551B4CCA320036CB05 /* threadqueue.h in Headers */,
+				5410E8311B3168A40087AC5D /* filetools.hpp in Headers */,
+				5410E5E81B314C630087AC5D /* ZapLib.h in Headers */,
+				5410E81C1B3168A40087AC5D /* binarizewolfjolion.h in Headers */,
+				5410E82A1B3168A40087AC5D /* DetectCardJni.h in Headers */,
+				5410E8391B3168A50087AC5D /* ImageMarker.h in Headers */,
+				5410E8771B31698A0087AC5D /* Application.h in Headers */,
+				5410E7C51B3168780087AC5D /* CvOcrImageProcess.h in Headers */,
+				5410E82F1B3168A40087AC5D /* DetectTextBlock.h in Headers */,
+				5410E7A01B3168780087AC5D /* FilterOcrCardResult.h in Headers */,
+				5410E7A21B3168780087AC5D /* TessResultParseCard.h in Headers */,
+				5410E8271B3168A40087AC5D /* DetectAt.h in Headers */,
+				54A0D9461B4CC9020036CB05 /* CardTrackerFeature.h in Headers */,
+				5410E83C1B3168A50087AC5D /* lsd2.hpp in Headers */,
+				5410E79F1B3168780087AC5D /* EmailStat.h in Headers */,
+				5410E8441B3168A50087AC5D /* StillDCardJniConstant.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5410E5E11B314C630087AC5D /* ZapLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5410E5F81B314C640087AC5D /* Build configuration list for PBXNativeTarget "ZapLib" */;
+			buildPhases = (
+				5410E5DD1B314C630087AC5D /* Sources */,
+				5410E5DE1B314C630087AC5D /* Frameworks */,
+				5410E5DF1B314C630087AC5D /* Headers */,
+				5410E5E01B314C630087AC5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZapLib;
+			productName = ZapLib;
+			productReference = 5410E5E21B314C630087AC5D /* ZapLib.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5410E5EC1B314C640087AC5D /* ZapLibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5410E5FB1B314C640087AC5D /* Build configuration list for PBXNativeTarget "ZapLibTests" */;
+			buildPhases = (
+				5410E5E91B314C640087AC5D /* Sources */,
+				5410E5EA1B314C640087AC5D /* Frameworks */,
+				5410E5EB1B314C640087AC5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5410E5F01B314C640087AC5D /* PBXTargetDependency */,
+			);
+			name = ZapLibTests;
+			productName = ZapLibTests;
+			productReference = 5410E5ED1B314C640087AC5D /* ZapLibTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5410E5D91B314C630087AC5D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Zappoint;
+				TargetAttributes = {
+					5410E5E11B314C630087AC5D = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					5410E5EC1B314C640087AC5D = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 5410E5DC1B314C630087AC5D /* Build configuration list for PBXProject "ZapLib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5410E5D81B314C630087AC5D;
+			productRefGroup = 5410E5E31B314C630087AC5D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5410E5E11B314C630087AC5D /* ZapLib */,
+				5410E5EC1B314C640087AC5D /* ZapLibTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5410E5E01B314C630087AC5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54A0D9561B4CCA320036CB05 /* Android.mk in Resources */,
+				5410E7B11B3168780087AC5D /* eng.traineddata in Resources */,
+				54A0D9541B4CCA320036CB05 /* Android.mk in Resources */,
+				5410E8161B3168A40087AC5D /* CvDetectCard.1 in Resources */,
+				5410E79D1B3168780087AC5D /* Android.mk in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5410E5EB1B314C640087AC5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5410E5DD1B314C630087AC5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54A0D9451B4CC9020036CB05 /* CardTrackerFeature.cpp in Sources */,
+				5410E7CB1B3168780087AC5D /* TextConfidence.cpp in Sources */,
+				5410E82B1B3168A40087AC5D /* DetectCardUnity.cpp in Sources */,
+				5410E8461B3168A50087AC5D /* zMyLine.cpp in Sources */,
+				5410E83D1B3168A50087AC5D /* main.cpp in Sources */,
+				5410E83B1B3168A50087AC5D /* lsd2.cpp in Sources */,
+				5410E87D1B31698A0087AC5D /* SimpleStat.cpp in Sources */,
+				5410E8421B3168A50087AC5D /* StillDCardJni.cpp in Sources */,
+				5410E7C81B3168780087AC5D /* FilterOcrCardResult.cpp in Sources */,
+				5410E8301B3168A40087AC5D /* filetools.cpp in Sources */,
+				5410E8321B3168A50087AC5D /* guitools.cpp in Sources */,
+				5410E8211B3168A40087AC5D /* CardTracker.cpp in Sources */,
+				54A0D9471B4CC9020036CB05 /* Matching.cpp in Sources */,
+				5410E7C71B3168780087AC5D /* EmailStat.cpp in Sources */,
+				5410E8261B3168A40087AC5D /* DetectAt.cpp in Sources */,
+				5410E8291B3168A40087AC5D /* DetectCardJni.cpp in Sources */,
+				5410E7C41B3168780087AC5D /* CvOcrImageProcess.cpp in Sources */,
+				5410E83E1B3168A50087AC5D /* preprocessimg.cpp in Sources */,
+				5410E81B1B3168A40087AC5D /* binarizewolfjolion.cpp in Sources */,
+				5410E87C1B31698A0087AC5D /* Application.cpp in Sources */,
+				5410E83A1B3168A50087AC5D /* imgtools.cpp in Sources */,
+				54A0D9571B4CCA320036CB05 /* threadqueue.c in Sources */,
+				5410E8381B3168A50087AC5D /* ImageMarker.cpp in Sources */,
+				54A0D9431B4CC9020036CB05 /* CardTrackerDetectAt.cpp in Sources */,
+				5410E7C91B3168780087AC5D /* TessHelper.cpp in Sources */,
+				5410E82C1B3168A40087AC5D /* detectrect.cpp in Sources */,
+				5410E8341B3168A50087AC5D /* guitools_cv.cpp in Sources */,
+				5410E7C61B3168780087AC5D /* CvOrcImageContainer.cpp in Sources */,
+				5410E8281B3168A40087AC5D /* DetectAtJni.cpp in Sources */,
+				5410E7CA1B3168780087AC5D /* TessResultParseCard.cpp in Sources */,
+				5410E82E1B3168A40087AC5D /* DetectTextBlock.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5410E5E91B314C640087AC5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5410E5F51B314C640087AC5D /* ZapLibTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5410E5F01B314C640087AC5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5410E5E11B314C630087AC5D /* ZapLib */;
+			targetProxy = 5410E5EF1B314C640087AC5D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5410E5F61B314C640087AC5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include/leptonica,
+					/usr/local/include/tesseract,
+					/usr/local/include,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5410E5F71B314C640087AC5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include/leptonica,
+					/usr/local/include/tesseract,
+					/usr/local/include,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5410E5F91B314C640087AC5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ZapLib/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5410E5FA1B314C640087AC5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ZapLib/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5410E5FC1B314C640087AC5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ZapLibTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5410E5FD1B314C640087AC5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ZapLibTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5410E5DC1B314C630087AC5D /* Build configuration list for PBXProject "ZapLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5410E5F61B314C640087AC5D /* Debug */,
+				5410E5F71B314C640087AC5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5410E5F81B314C640087AC5D /* Build configuration list for PBXNativeTarget "ZapLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5410E5F91B314C640087AC5D /* Debug */,
+				5410E5FA1B314C640087AC5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5410E5FB1B314C640087AC5D /* Build configuration list for PBXNativeTarget "ZapLibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5410E5FC1B314C640087AC5D /* Debug */,
+				5410E5FD1B314C640087AC5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5410E5D91B314C630087AC5D /* Project object */;
+}
