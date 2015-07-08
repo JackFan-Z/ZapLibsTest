@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "ZapLib/TessHelper.h"
+#include "osdetect.h"
 #include "ZapLib/Application.h"
 #include "CardOcrResult.h"
 #include "SerializationObjectArray.h"
@@ -23,7 +24,7 @@ exit(-1);
 std::string TESSDATA_PREFIX="/Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/ZapOcr/sample";
 using namespace cv;
 
-MY_APP(TestOcr, "/Users/jackf/Downloads/TestImages/0617");
+MY_APP(TestOcr, "/Users/jackf/Downloads/TestImages/0708_verticle");
 MY_APP_INIT(TestOcr, intParam)
 {
     //if(tessHelper.Init(TESSDATA_PREFIX.c_str(), "chi_tra") == false)
@@ -35,11 +36,12 @@ MY_APP_INIT(TestOcr, intParam)
     //Comment out this to do only one pass
     tessHelper.SetVariable("dopasses", "1");
     tesseract::TessBaseAPI* tess = tessHelper.GetTess();
+    //tess->SetPageSegMode(tesseract::PSM_OSD_ONLY);
     tess->SetPageSegMode(tesseract::PSM_AUTO);
     
 #if !MOBILE_PLATFORM
     // Control the level of std::out
-    SetDebugLevel(2);
+    SetDebugLevel(1);
     // Control the color of std::out
     EnableXcodeColor(true);
 #endif
@@ -53,11 +55,39 @@ MY_APP_PROCESSFILE(TestOcr, path)
     
     std::vector< std::vector<TextConfidence> > finalResult;
     Mat src0 = imread(path);
+    ImShow("rects", src0);
+    int key = waitKey(200);
     
     tessHelper.RunCvOcr(path, finalResult);
 
     //bool getHOcrRet = tessHelper.SaveHOCRText(GetFileName(path, 1).c_str(), ReplaceExtension(path, "").c_str());
-    tessHelper.SaveThresholdImage(ReplaceExtension(path, ".png"));
+    //tessHelper.SaveThresholdImage(ReplaceExtension(path, ".png"));
+    tesseract::PageSegMode psm = tess->GetPageSegMode();
+    if (psm == tesseract::PSM_OSD_ONLY || psm == tesseract::PSM_AUTO_OSD)
+    {
+        OSResults osr;
+        if (tess->DetectOS(&osr)) {
+            int orient = osr.best_result.orientation_id;
+            int script_id = osr.get_best_script(orient);
+            float orient_oco = osr.best_result.oconfidence;
+            float orient_sco = osr.best_result.sconfidence;
+            if (orient_oco < 1) {
+                LOG_ERROR("Orientation: %d\nOrientation in degrees: %d\n" \
+                          "Orientation confidence: %.2f\n" \
+                          "Script: %d\nScript confidence: %.2f\n",
+                          orient, OrientationIdToValue(orient), orient_oco,
+                          script_id, orient_sco);
+            }
+            else
+            {
+                LOG_D("Orientation: %d\nOrientation in degrees: %d\n" \
+                      "Orientation confidence: %.2f\n" \
+                      "Script: %d\nScript confidence: %.2f\n",
+                      orient, OrientationIdToValue(orient), orient_oco,
+                      script_id, orient_sco);
+            }
+        }
+    }
     
     const char* recogText = tessHelper.GetUTF8Text();
     std::string recogString(recogText);
@@ -72,7 +102,7 @@ MY_APP_PROCESSFILE(TestOcr, path)
     Mat tmp = src0.clone();
     DrawRects(tmp, rects, Scalar(0,255,0), thickness);
     ImShow("rects", tmp);
-    int key = waitKey(0);
+    key = waitKey(1000);
     return key;
 }
 

@@ -61,6 +61,10 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "-s &quot;2200&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-i 2"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
