@@ -30,7 +30,7 @@
 		5410E81B1B3168A40087AC5D /* binarizewolfjolion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7E71B3168A40087AC5D /* binarizewolfjolion.cpp */; };
 		5410E81C1B3168A40087AC5D /* binarizewolfjolion.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E7E81B3168A40087AC5D /* binarizewolfjolion.h */; };
 		5410E8211B3168A40087AC5D /* CardTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7ED1B3168A40087AC5D /* CardTracker.cpp */; };
-		5410E8221B3168A40087AC5D /* CardTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E7EE1B3168A40087AC5D /* CardTracker.h */; };
+		5410E8221B3168A40087AC5D /* CardTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E7EE1B3168A40087AC5D /* CardTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5410E8231B3168A40087AC5D /* CVUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E7EF1B3168A40087AC5D /* CVUtil.h */; };
 		5410E8261B3168A40087AC5D /* DetectAt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7F21B3168A40087AC5D /* DetectAt.cpp */; };
 		5410E8271B3168A40087AC5D /* DetectAt.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E7F31B3168A40087AC5D /* DetectAt.h */; };
@@ -85,11 +85,11 @@
 		54A0D9431B4CC9020036CB05 /* CardTrackerDetectAt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54A0D93D1B4CC9020036CB05 /* CardTrackerDetectAt.cpp */; };
 		54A0D9441B4CC9020036CB05 /* CardTrackerDetectAt.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A0D93E1B4CC9020036CB05 /* CardTrackerDetectAt.h */; };
 		54A0D9451B4CC9020036CB05 /* CardTrackerFeature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54A0D93F1B4CC9020036CB05 /* CardTrackerFeature.cpp */; };
-		54A0D9461B4CC9020036CB05 /* CardTrackerFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A0D9401B4CC9020036CB05 /* CardTrackerFeature.h */; };
+		54A0D9461B4CC9020036CB05 /* CardTrackerFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A0D9401B4CC9020036CB05 /* CardTrackerFeature.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54A0D9471B4CC9020036CB05 /* Matching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54A0D9411B4CC9020036CB05 /* Matching.cpp */; };
 		54A0D9481B4CC9020036CB05 /* Matching.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A0D9421B4CC9020036CB05 /* Matching.h */; };
 		54A0D9541B4CCA320036CB05 /* Android.mk in Resources */ = {isa = PBXBuildFile; fileRef = 54A0D94C1B4CCA320036CB05 /* Android.mk */; };
-		54A0D9551B4CCA320036CB05 /* threadqueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A0D94E1B4CCA320036CB05 /* threadqueue.h */; };
+		54A0D9551B4CCA320036CB05 /* threadqueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A0D94E1B4CCA320036CB05 /* threadqueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54A0D9561B4CCA320036CB05 /* Android.mk in Resources */ = {isa = PBXBuildFile; fileRef = 54A0D9511B4CCA320036CB05 /* Android.mk */; };
 		54A0D9571B4CCA320036CB05 /* threadqueue.c in Sources */ = {isa = PBXBuildFile; fileRef = 54A0D9531B4CCA320036CB05 /* threadqueue.c */; };
 		54A0D9591B4CCAAB0036CB05 /* libopencv_calib3d.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A0D9581B4CCAAB0036CB05 /* libopencv_calib3d.3.0.0.dylib */; };
