@@ -15,6 +15,9 @@
 #include "ZapLib/guitools.hpp"
 #include "ZapLib/guitools_cv.h"
 #include <sys/stat.h>
+#include "ZapLib/SimpleStat.h"
+#include "ZapLib/FilterOcrCardResult.h"
+
 
 TessHelper tessHelper;
 #define TEST_FAILED(x) \
@@ -24,7 +27,9 @@ exit(-1);
 std::string TESSDATA_PREFIX="/Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/ZapOcr/sample";
 using namespace cv;
 
-MY_APP(TestOcr, "/Users/jackf/Downloads/TestImages/0708_verticle");
+
+SimpleStat simpleStat;
+MY_APP(TestOcr, "/Users/jackf/Dropbox/Work/TestImage/0718");
 MY_APP_INIT(TestOcr, intParam)
 {
     //if(tessHelper.Init(TESSDATA_PREFIX.c_str(), "chi_tra") == false)
@@ -32,18 +37,19 @@ MY_APP_INIT(TestOcr, intParam)
     {
         TEST_FAILED("Tess Init");
     }
-    //tessHelper.SetDefaultVariables();
+    tessHelper.SetDefaultVariables();
     //Comment out this to do only one pass
     tessHelper.SetVariable("dopasses", "1");
     tesseract::TessBaseAPI* tess = tessHelper.GetTess();
     //tess->SetPageSegMode(tesseract::PSM_OSD_ONLY);
-    tess->SetPageSegMode(tesseract::PSM_AUTO);
+    tess->SetPageSegMode(tesseract::PSM_AUTO_OSD);
     
 #if !MOBILE_PLATFORM
     // Control the level of std::out
     SetDebugLevel(1);
     // Control the color of std::out
     EnableXcodeColor(true);
+    //TEST_ExtractStringWithTwoSeqPatterns();
 #endif
     return 0;
 }
@@ -58,56 +64,39 @@ MY_APP_PROCESSFILE(TestOcr, path)
     ImShow("rects", src0);
     int key = waitKey(200);
     
-    tessHelper.RunCvOcr(path, finalResult);
-
+    //tessHelper.RunCvOcr(path, finalResult);
+    TIME_MEASURE_BEGIN
+    tessHelper.RunCvOcr(src0, finalResult, 70);
+    TIME_MEASURE_END("RunCvOcr")
+    
     //bool getHOcrRet = tessHelper.SaveHOCRText(GetFileName(path, 1).c_str(), ReplaceExtension(path, "").c_str());
     //tessHelper.SaveThresholdImage(ReplaceExtension(path, ".png"));
-    tesseract::PageSegMode psm = tess->GetPageSegMode();
-    if (psm == tesseract::PSM_OSD_ONLY || psm == tesseract::PSM_AUTO_OSD)
-    {
-        OSResults osr;
-        if (tess->DetectOS(&osr)) {
-            int orient = osr.best_result.orientation_id;
-            int script_id = osr.get_best_script(orient);
-            float orient_oco = osr.best_result.oconfidence;
-            float orient_sco = osr.best_result.sconfidence;
-            if (orient_oco < 1) {
-                LOG_ERROR("Orientation: %d\nOrientation in degrees: %d\n" \
-                          "Orientation confidence: %.2f\n" \
-                          "Script: %d\nScript confidence: %.2f\n",
-                          orient, OrientationIdToValue(orient), orient_oco,
-                          script_id, orient_sco);
-            }
-            else
-            {
-                LOG_D("Orientation: %d\nOrientation in degrees: %d\n" \
-                      "Orientation confidence: %.2f\n" \
-                      "Script: %d\nScript confidence: %.2f\n",
-                      orient, OrientationIdToValue(orient), orient_oco,
-                      script_id, orient_sco);
-            }
-        }
-    }
+
+    OSResults osr;
+    tessHelper.GetOrientation(&osr);
     
-    const char* recogText = tessHelper.GetUTF8Text();
-    std::string recogString(recogText);
-    delete recogText;
-    std::cout << recogString << std::endl;
+    SimpleTestResult testResult(path, osr.best_result.orientation_id);
+    testResult.mScores.push_back(osr.best_result.sconfidence);
+    testResult.mScores.push_back(tessHelper.GetRecogTime());
+    simpleStat.Add(testResult);
     
     std::vector<cv::Rect> rects;
-    tessHelper.GetResultRects(TessHelper::OPTION_RECTS::Component, rects);
+    tessHelper.GetResultRects(TessHelper::OPTION_RECTS::Word, rects);
     tessHelper.Clear();
     
     int thickness = MAX(src0.cols / 400, 1);
-    Mat tmp = src0.clone();
+    Mat tmp;
+    resize(src0, tmp, Size(src0.cols * 9 / 5, src0.rows * 9 / 5));
+    
     DrawRects(tmp, rects, Scalar(0,255,0), thickness);
     ImShow("rects", tmp);
-    key = waitKey(1000);
+    key = waitKey(200);
     return key;
 }
 
 MY_APP_END(TestOcr, intParam)
 {
+    simpleStat.DumpStat();
     return 0;
 }
 

@@ -93,6 +93,7 @@
 		54A0D9561B4CCA320036CB05 /* Android.mk in Resources */ = {isa = PBXBuildFile; fileRef = 54A0D9511B4CCA320036CB05 /* Android.mk */; };
 		54A0D9571B4CCA320036CB05 /* threadqueue.c in Sources */ = {isa = PBXBuildFile; fileRef = 54A0D9531B4CCA320036CB05 /* threadqueue.c */; };
 		54A0D9591B4CCAAB0036CB05 /* libopencv_calib3d.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A0D9581B4CCAAB0036CB05 /* libopencv_calib3d.3.0.0.dylib */; };
+		54FFBF241B608CBA00FCA70F /* stringtool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54FFBF231B608CBA00FCA70F /* stringtool.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,6 +196,8 @@
 		54A0D9511B4CCA320036CB05 /* Android.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Android.mk; sourceTree = "<group>"; };
 		54A0D9531B4CCA320036CB05 /* threadqueue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = threadqueue.c; sourceTree = "<group>"; };
 		54A0D9581B4CCAAB0036CB05 /* libopencv_calib3d.3.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_calib3d.3.0.0.dylib; path = ../../../../../../usr/local/lib/libopencv_calib3d.3.0.0.dylib; sourceTree = "<group>"; };
+		54FFBF231B608CBA00FCA70F /* stringtool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stringtool.cpp; sourceTree = "<group>"; };
+		54FFBF251B608E6900FCA70F /* stringtool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stringtool.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -470,6 +473,7 @@
 			isa = PBXGroup;
 			children = (
 				54A0D94E1B4CCA320036CB05 /* threadqueue.h */,
+				54FFBF251B608E6900FCA70F /* stringtool.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -494,6 +498,7 @@
 			isa = PBXGroup;
 			children = (
 				54A0D9531B4CCA320036CB05 /* threadqueue.c */,
+				54FFBF231B608CBA00FCA70F /* stringtool.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -664,6 +669,7 @@
 				5410E83E1B3168A50087AC5D /* preprocessimg.cpp in Sources */,
 				5410E81B1B3168A40087AC5D /* binarizewolfjolion.cpp in Sources */,
 				5410E87C1B31698A0087AC5D /* Application.cpp in Sources */,
+				54FFBF241B608CBA00FCA70F /* stringtool.cpp in Sources */,
 				5410E83A1B3168A50087AC5D /* imgtools.cpp in Sources */,
 				54A0D9571B4CCA320036CB05 /* threadqueue.c in Sources */,
 				5410E8381B3168A50087AC5D /* ImageMarker.cpp in Sources */,
