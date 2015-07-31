@@ -22,10 +22,21 @@
 		5410E5CF1B3142670087AC5D /* libopencv_features2d.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E5C21B3142670087AC5D /* libopencv_features2d.3.0.0.dylib */; };
 		5410E87F1B316A5A0087AC5D /* ZapLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E87E1B316A5A0087AC5D /* ZapLib.framework */; };
 		545245481B301BAA00610FA8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 545245471B301BAA00610FA8 /* main.cpp */; };
+		545B456F1B6B1F9100049AE6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 545B456E1B6B1F9100049AE6 /* main.cpp */; };
+		545B45731B6B1FC200049AE6 /* ZapLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E87E1B316A5A0087AC5D /* ZapLib.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		545245421B301BAA00610FA8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		545B456A1B6B1F9100049AE6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -112,6 +123,8 @@
 		5452461C1B3024F500610FA8 /* unordered_set.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = unordered_set.hpp; sourceTree = "<group>"; };
 		5452461D1B3024F500610FA8 /* utility.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = utility.hpp; sourceTree = "<group>"; };
 		5452461E1B3024F500610FA8 /* vector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = vector.hpp; sourceTree = "<group>"; };
+		545B456C1B6B1F9100049AE6 /* TestCardDetection */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestCardDetection; sourceTree = BUILT_PRODUCTS_DIR; };
+		545B456E1B6B1F9100049AE6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +146,14 @@
 				5410E5C31B3142670087AC5D /* libopencv_video.3.0.0.dylib in Frameworks */,
 				5410E5C81B3142670087AC5D /* libopencv_photo.3.0.0.dylib in Frameworks */,
 				5410E5CE1B3142670087AC5D /* libopencv_core.3.0.0.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		545B45691B6B1F9100049AE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				545B45731B6B1FC200049AE6 /* ZapLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +188,7 @@
 				545245E01B30246000610FA8 /* include */,
 				5452458D1B301CAD00610FA8 /* JsonUtil */,
 				545245461B301BAA00610FA8 /* TestOcr */,
+				545B456D1B6B1F9100049AE6 /* TestCardDetection */,
 				545245451B301BAA00610FA8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -175,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				545245441B301BAA00610FA8 /* TestOcr */,
+				545B456C1B6B1F9100049AE6 /* TestCardDetection */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -334,6 +357,14 @@
 			path = types;
 			sourceTree = "<group>";
 		};
+		545B456D1B6B1F9100049AE6 /* TestCardDetection */ = {
+			isa = PBXGroup;
+			children = (
+				545B456E1B6B1F9100049AE6 /* main.cpp */,
+			);
+			path = TestCardDetection;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -354,6 +385,23 @@
 			productReference = 545245441B301BAA00610FA8 /* TestOcr */;
 			productType = "com.apple.product-type.tool";
 		};
+		545B456B1B6B1F9100049AE6 /* TestCardDetection */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 545B45721B6B1F9100049AE6 /* Build configuration list for PBXNativeTarget "TestCardDetection" */;
+			buildPhases = (
+				545B45681B6B1F9100049AE6 /* Sources */,
+				545B45691B6B1F9100049AE6 /* Frameworks */,
+				545B456A1B6B1F9100049AE6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestCardDetection;
+			productName = TestCardDetection;
+			productReference = 545B456C1B6B1F9100049AE6 /* TestCardDetection */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -365,6 +413,9 @@
 				TargetAttributes = {
 					545245431B301BAA00610FA8 = {
 						CreatedOnToolsVersion = 6.3.1;
+					};
+					545B456B1B6B1F9100049AE6 = {
+						CreatedOnToolsVersion = 6.4;
 					};
 				};
 			};
@@ -381,6 +432,7 @@
 			projectRoot = "";
 			targets = (
 				545245431B301BAA00610FA8 /* TestOcr */,
+				545B456B1B6B1F9100049AE6 /* TestCardDetection */,
 			);
 		};
 /* End PBXProject section */
@@ -391,6 +443,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				545245481B301BAA00610FA8 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		545B45681B6B1F9100049AE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				545B456F1B6B1F9100049AE6 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +592,32 @@
 			};
 			name = Release;
 		};
+		545B45701B6B1F9100049AE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Workspace1-gshyfnzmvbxkdxcndgwcbevuszla/Build/Products/Debug",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		545B45711B6B1F9100049AE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Workspace1-gshyfnzmvbxkdxcndgwcbevuszla/Build/Products/Debug",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -552,6 +638,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		545B45721B6B1F9100049AE6 /* Build configuration list for PBXNativeTarget "TestCardDetection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				545B45701B6B1F9100049AE6 /* Debug */,
+				545B45711B6B1F9100049AE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

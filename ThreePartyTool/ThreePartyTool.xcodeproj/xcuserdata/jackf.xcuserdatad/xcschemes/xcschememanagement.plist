@@ -4,15 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>TestCardDetection.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>ThreePartyTool.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>545245431B301BAA00610FA8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>545B456B1B6B1F9100049AE6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
