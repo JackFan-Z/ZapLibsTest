@@ -55,7 +55,7 @@
 		5410E83C1B3168A50087AC5D /* lsd2.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8081B3168A40087AC5D /* lsd2.hpp */; };
 		5410E83D1B3168A50087AC5D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E8091B3168A40087AC5D /* main.cpp */; };
 		5410E83E1B3168A50087AC5D /* preprocessimg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E80A1B3168A40087AC5D /* preprocessimg.cpp */; };
-		5410E83F1B3168A50087AC5D /* preprocessimg.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5410E80B1B3168A40087AC5D /* preprocessimg.hpp */; };
+		5410E83F1B3168A50087AC5D /* preprocessimg.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5410E80B1B3168A40087AC5D /* preprocessimg.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		5410E8421B3168A50087AC5D /* StillDCardJni.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E80E1B3168A40087AC5D /* StillDCardJni.cpp */; };
 		5410E8431B3168A50087AC5D /* StillDCardJni.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E80F1B3168A40087AC5D /* StillDCardJni.h */; };
 		5410E8441B3168A50087AC5D /* StillDCardJniConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8101B3168A40087AC5D /* StillDCardJniConstant.h */; };

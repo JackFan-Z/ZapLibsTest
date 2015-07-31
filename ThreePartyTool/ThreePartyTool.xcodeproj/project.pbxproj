@@ -24,6 +24,13 @@
 		545245481B301BAA00610FA8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 545245471B301BAA00610FA8 /* main.cpp */; };
 		545B456F1B6B1F9100049AE6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 545B456E1B6B1F9100049AE6 /* main.cpp */; };
 		545B45731B6B1FC200049AE6 /* ZapLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E87E1B316A5A0087AC5D /* ZapLib.framework */; };
+		545B45741B6B264300049AE6 /* libopencv_core.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E5C11B3142670087AC5D /* libopencv_core.3.0.0.dylib */; };
+		545B45751B6B264600049AE6 /* libopencv_imgproc.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E5C01B3142670087AC5D /* libopencv_imgproc.3.0.0.dylib */; };
+		545B45761B6B264A00049AE6 /* libopencv_imgcodecs.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E5BF1B3142670087AC5D /* libopencv_imgcodecs.3.0.0.dylib */; };
+		545B45771B6B264D00049AE6 /* libopencv_highgui.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E5BE1B3142670087AC5D /* libopencv_highgui.3.0.0.dylib */; };
+		545B45781B6B265900049AE6 /* libopencv_flann.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E5BD1B3142670087AC5D /* libopencv_flann.3.0.0.dylib */; };
+		545B45791B6B265D00049AE6 /* libopencv_objdetect.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E5BC1B3142670087AC5D /* libopencv_objdetect.3.0.0.dylib */; };
+		545B457B1B6B266200049AE6 /* libopencv_calib3d.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 545B457A1B6B266200049AE6 /* libopencv_calib3d.3.0.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -125,6 +132,7 @@
 		5452461E1B3024F500610FA8 /* vector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = vector.hpp; sourceTree = "<group>"; };
 		545B456C1B6B1F9100049AE6 /* TestCardDetection */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestCardDetection; sourceTree = BUILT_PRODUCTS_DIR; };
 		545B456E1B6B1F9100049AE6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		545B457A1B6B266200049AE6 /* libopencv_calib3d.3.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_calib3d.3.0.0.dylib; path = ../../../../../../usr/local/lib/libopencv_calib3d.3.0.0.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +162,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				545B45731B6B1FC200049AE6 /* ZapLib.framework in Frameworks */,
+				545B45761B6B264A00049AE6 /* libopencv_imgcodecs.3.0.0.dylib in Frameworks */,
+				545B45771B6B264D00049AE6 /* libopencv_highgui.3.0.0.dylib in Frameworks */,
+				545B45741B6B264300049AE6 /* libopencv_core.3.0.0.dylib in Frameworks */,
+				545B45751B6B264600049AE6 /* libopencv_imgproc.3.0.0.dylib in Frameworks */,
+				545B45791B6B265D00049AE6 /* libopencv_objdetect.3.0.0.dylib in Frameworks */,
+				545B457B1B6B266200049AE6 /* libopencv_calib3d.3.0.0.dylib in Frameworks */,
+				545B45781B6B265900049AE6 /* libopencv_flann.3.0.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +198,7 @@
 		5452453B1B301BAA00610FA8 = {
 			isa = PBXGroup;
 			children = (
+				545B457A1B6B266200049AE6 /* libopencv_calib3d.3.0.0.dylib */,
 				5410E87E1B316A5A0087AC5D /* ZapLib.framework */,
 				5410E5B51B31423E0087AC5D /* library */,
 				545245E01B30246000610FA8 /* include */,
@@ -603,6 +619,10 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -613,6 +633,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Workspace1-gshyfnzmvbxkdxcndgwcbevuszla/Build/Products/Debug",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
