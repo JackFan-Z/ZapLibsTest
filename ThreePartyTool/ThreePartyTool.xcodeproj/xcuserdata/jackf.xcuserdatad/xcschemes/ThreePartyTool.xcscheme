@@ -64,10 +64,17 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-i 39"
+            argument = "-i 52"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "SCROLLVIEW_PATH"
+            value = "/Users/jackf/Documents/androidstudio/ZappointPlus/subm_tess-two/tess-two/jni/com_googlecode_tesseract_android/src/java"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

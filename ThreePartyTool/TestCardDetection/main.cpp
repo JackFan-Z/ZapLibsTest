@@ -17,7 +17,9 @@ static CardTracker* gTheCardTracker = NULL;
 using namespace std;
 using namespace cv;
 
-MY_APP(TestCardDetection, "/Users/jackf/Dropbox/Work/TestImage/0731");
+string dir = "/Users/jackf/Downloads/TestImages/0604/raw";
+//string dir = "/Users/jackf/Dropbox/Work/TestImage/0731";
+MY_APP(TestCardDetection, dir);
 
 MY_APP_INIT(TestCardDetection, intParam)
 {
@@ -25,9 +27,9 @@ MY_APP_INIT(TestCardDetection, intParam)
     gTheCardTracker->Init(NULL);
 #if !MOBILE_PLATFORM
     // Control the level of std::out
-    SetDebugLevel(1);
+    SetDebugLevel(3);
     // Control the color of std::out
-    EnableXcodeColor(true);
+    //EnableXcodeColor(true);
 #endif
     return 0;
 }
@@ -37,7 +39,11 @@ MY_APP_PROCESSFILE(TestCardDetection, path)
     Mat src0 = imread(path);
     std::vector<cv::Point2f> Corners;
     bool ret = gTheCardTracker->ProcessFrame(&src0, Corners);
-    
+    if (ret == false)
+    {
+        LOG_ERROR("Fail to detect the card");
+        return -1;
+    }
     int fullFOVSize = 3200;
     int degreeFOV = 30;
     Mat quadImg;
@@ -46,7 +52,7 @@ MY_APP_PROCESSFILE(TestCardDetection, path)
     CutOutCardBorder( quadImg, cutImage);
     ImShow("Result", cutImage);
     int key;
-    key = waitKey(0);
+    key = waitKey(100);
     return key;
 }
 

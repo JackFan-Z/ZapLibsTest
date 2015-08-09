@@ -17,6 +17,7 @@
 #include <sys/stat.h>
 #include "ZapLib/SimpleStat.h"
 #include "ZapLib/FilterOcrCardResult.h"
+#include "ZapLib/preprocessimg.hpp"
 
 
 TessHelper tessHelper;
@@ -40,6 +41,14 @@ MY_APP_INIT(TestOcr, intParam)
     tessHelper.SetDefaultVariables();
     //Comment out this to do only one pass
     tessHelper.SetVariable("dopasses", "1");
+    //tessHelper.SetVariable("textord_debug_images", "true");
+    //tessHelper.SetVariable("tessedit_dump_pageseg_images", "true");
+    //tessHelper.SetVariable("textord_tabfind_show_initialtabs", "true");
+    //tessHelper.SetVariable("textord_tabfind_show_initial_partitions", "true");
+    //tessHelper.SetVariable("textord_tabfind_show_columns", "true");
+    //tessHelper.SetVariable("textord_tabfind_show_strokewidths", "1" );
+    //tessHelper.SetVariable("textord_debug_tabfind", "1");
+    //tessHelper.SetVariable("textord_tabfind_merge_blocks", "false");
     tesseract::TessBaseAPI* tess = tessHelper.GetTess();
     //tess->SetPageSegMode(tesseract::PSM_OSD_ONLY);
     tess->SetPageSegMode(tesseract::PSM_AUTO_OSD);
@@ -56,6 +65,12 @@ MY_APP_INIT(TestOcr, intParam)
 
 MY_APP_PROCESSFILE(TestOcr, path)
 {
+    if (path.find(".png") != string::npos)
+    {
+        LOG_D("The file is skipped");
+        return 0;
+    }
+    
     tesseract::TessBaseAPI* tess = tessHelper.GetTess();
     tess->SetOutputName(ReplaceExtension(path, ".txt").c_str());
     
@@ -66,31 +81,51 @@ MY_APP_PROCESSFILE(TestOcr, path)
     
     //tessHelper.RunCvOcr(path, finalResult);
     TIME_MEASURE_BEGIN
+#if 0
     tessHelper.RunCvOcr(src0, finalResult, 70);
+#else
+    Mat gray;
+    GetGrayImage(src0, gray, false);
+    float scale = 1.8f;
+    resize(gray, gray, Size(gray.cols * scale, gray.rows * scale));
+    tessHelper.RunOcr(gray, Rect());
+    tessHelper.GetOcrResultForCard(finalResult, 75);
+#endif
     TIME_MEASURE_END("RunCvOcr")
     
     //bool getHOcrRet = tessHelper.SaveHOCRText(GetFileName(path, 1).c_str(), ReplaceExtension(path, "").c_str());
-    //tessHelper.SaveThresholdImage(ReplaceExtension(path, ".png"));
+    tessHelper.SaveThresholdImage(ReplaceExtension(path, ".png"));
 
     OSResults osr;
-    tessHelper.GetOrientation(&osr);
+    //tessHelper.GetOrientation(&osr);
     
     SimpleTestResult testResult(path, osr.best_result.orientation_id);
     testResult.mScores.push_back(osr.best_result.sconfidence);
     testResult.mScores.push_back(tessHelper.GetRecogTime());
     simpleStat.Add(testResult);
     
-    std::vector<cv::Rect> rects;
-    tessHelper.GetResultRects(TessHelper::OPTION_RECTS::Word, rects);
+    std::vector<cv::Rect> regionRects;
+    tessHelper.GetResultRects(TessHelper::OPTION_RECTS::Region, regionRects);
+    std::vector<cv::Rect> textLineRects;
+    tessHelper.GetResultRects(TessHelper::OPTION_RECTS::Textline, textLineRects);
     tessHelper.Clear();
     
-    int thickness = MAX(src0.cols / 400, 1);
     Mat tmp;
     resize(src0, tmp, Size(src0.cols * 9 / 5, src0.rows * 9 / 5));
+    int thickness = MAX(src0.cols / 400, 1);
     
-    DrawRects(tmp, rects, Scalar(0,255,0), thickness);
+    for (int k=0; k<regionRects.size(); k++)
+    {
+        regionRects[k].x -= thickness * 4;
+        regionRects[k].y -= thickness * 4;
+        regionRects[k].width += thickness * 8;
+        regionRects[k].height += thickness * 8;
+    }
+    DrawRects(tmp, regionRects, Scalar(255,100,0), thickness);
+    DrawRects(tmp, textLineRects, Scalar(0,255,0), thickness);
     ImShow("rects", tmp);
-    key = waitKey(200);
+    //imwrite("/Users/jackf/Downloads/TestImages/0803/BadForAddress_1.jpg", tmp);
+    key = waitKey(0);
     return key;
 }
 
