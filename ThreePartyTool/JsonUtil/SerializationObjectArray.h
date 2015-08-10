@@ -17,14 +17,38 @@
 #include "json/json.h"
 #include "ZapLib/filetools.hpp"
 
-
 template <class _T>
-bool SaveObjectToFile(const _T& object, std::string path, const std::string& preferName)
+bool SaveObjectToFile(const _T& object, std::string path, const std::string& preferName, bool overwriteIfExist)
 {
+    if (overwriteIfExist==false)
+    {
+        std::ifstream ifile(path);
+        if( ifile.is_open() )
+        {
+            const size_t WARNING_SIZE = 3*1024*1024;
+            ifile.seekg(0, std::ios::end);
+            streampos size = ifile.tellg();
+            if (size > WARNING_SIZE)
+            {
+                std::cout << " ! Warning: the file " << path << "size is big. " << size << std::endl;
+            }
+            else if (size > 0)
+            {
+                std::cout << path << " exists" << std::endl;
+                return false;
+            }
+        }
+    }
     std::ofstream ofile(path);
     cereal::JSONOutputArchive archive(ofile);
     archive(cereal::make_nvp(preferName.c_str(), object) ); // specify a name of your choosing
     return true;
+}
+
+template <class _T>
+bool SaveObjectToFile(const _T& object, std::string path, const std::string& preferName)
+{
+    return SaveObjectToFile(object, path, preferName, false);
 }
 
 template <class _T>
