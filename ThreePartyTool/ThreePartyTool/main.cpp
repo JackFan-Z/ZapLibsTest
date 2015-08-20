@@ -30,7 +30,23 @@ using namespace cv;
 
 
 SimpleStat simpleStat;
+//MY_APP(TestOcr, "/Users/jackf/Downloads/TestImages/0810_CardOcr");
+//MY_APP(TestOcr, "/Users/jackf/Dropbox/Work/TestImage/0810");
 MY_APP(TestOcr, "/Users/jackf/Dropbox/Work/TestImage/0718");
+//MY_APP(TestOcr, "/Users/jackf/Downloads/TestImages/0810_OSD/0718");
+
+
+bool progressJavaCallback(void* progress_this, int progress, int left, int right,
+                          int top, int bottom)
+{
+    TessHelper* tessHelper = (TessHelper*) progress_this;
+    return true;
+}
+bool cancelFunc(void* cancel_this, int words) {
+    //LOG_ERROR("cancelFunc");
+    return false;
+}
+
 MY_APP_INIT(TestOcr, intParam)
 {
     //if(tessHelper.Init(TESSDATA_PREFIX.c_str(), "chi_tra") == false)
@@ -39,19 +55,37 @@ MY_APP_INIT(TestOcr, intParam)
         TEST_FAILED("Tess Init");
     }
     tessHelper.SetDefaultVariables();
+    
+    tesseract::TessBaseAPI* tess = tessHelper.GetTess();
+    //tess->SetPageSegMode(tesseract::PSM_OSD_ONLY);
+    tess->SetPageSegMode(tesseract::PSM_AUTO_OSD);
+
     //Comment out this to do only one pass
     tessHelper.SetVariable("dopasses", "1");
     //tessHelper.SetVariable("textord_debug_images", "true");
     //tessHelper.SetVariable("tessedit_dump_pageseg_images", "true");
     //tessHelper.SetVariable("textord_tabfind_show_initialtabs", "true");
+    //tessHelper.SetVariable("textord_tabfind_show_partitions", "1");
     //tessHelper.SetVariable("textord_tabfind_show_initial_partitions", "true");
+    //tessHelper.SetVariable("textord_debug_printable", "true");
+    //tessHelper.SetVariable("textord_tabfind_find_tables", "false");
     //tessHelper.SetVariable("textord_tabfind_show_columns", "true");
     //tessHelper.SetVariable("textord_tabfind_show_strokewidths", "1" );
     //tessHelper.SetVariable("textord_debug_tabfind", "1");
-    //tessHelper.SetVariable("textord_tabfind_merge_blocks", "false");
-    tesseract::TessBaseAPI* tess = tessHelper.GetTess();
-    //tess->SetPageSegMode(tesseract::PSM_OSD_ONLY);
-    tess->SetPageSegMode(tesseract::PSM_AUTO_OSD);
+    tessHelper.SetVariable("textord_tabfind_merge_blocks", "false");
+    //tessHelper.SetVariable("language_model_penalty_non_dict_word", "2.9");
+    //tessHelper.SetVariable("language_model_penalty_non_freq_dict_word", "2.9");
+    //tessHelper.SetVariable("enable_new_segsearch", "true");
+    STRING value;
+    tess->GetVariableAsString("language_model_penalty_non_dict_word", &value);
+    LOG_D("language_model_penalty_non_dict_word = %s", value.c_str());
+    tess->GetVariableAsString("language_model_penalty_non_freq_dict_word", &value);
+    LOG_D("language_model_penalty_non_freq_dict_word = %s", value.c_str());
+    tess->GetVariableAsString("enable_new_segsearch", &value);
+    LOG_D("enable_new_segsearch=%s", value.c_str());
+    
+    tessHelper.SetProgressCallback(progressJavaCallback);
+    tessHelper.SetCancelCallback(cancelFunc);
     
 #if !MOBILE_PLATFORM
     // Control the level of std::out
@@ -81,23 +115,31 @@ MY_APP_PROCESSFILE(TestOcr, path)
     
     //tessHelper.RunCvOcr(path, finalResult);
     TIME_MEASURE_BEGIN
-#if 0
+#if 1
+    float scale = 1.8f;
     tessHelper.RunCvOcr(src0, finalResult, 70);
 #else
     Mat gray;
     GetGrayImage(src0, gray, false);
-    float scale = 1.8f;
-    resize(gray, gray, Size(gray.cols * scale, gray.rows * scale));
+    float scale = 1.f;
+    if (scale > 1.f)
+    {
+        resize(gray, gray, Size(gray.cols * scale, gray.rows * scale));
+    }
     tessHelper.RunOcr(gray, Rect());
     tessHelper.GetOcrResultForCard(finalResult, 75);
 #endif
     TIME_MEASURE_END("RunCvOcr")
+    OSResults osr;
+    int tessOrientation = tessHelper.GetOrientation(&osr);
+    
+    zp::CardOcrResult ocrResult;
+    ocrResult.set(finalResult);
+    ocrResult.setTessOrientation(tessOrientation);
+    SaveObjectToFile(ocrResult, ReplaceExtension(path, ".txt"), "CardOcrResult");
     
     //bool getHOcrRet = tessHelper.SaveHOCRText(GetFileName(path, 1).c_str(), ReplaceExtension(path, "").c_str());
-    tessHelper.SaveThresholdImage(ReplaceExtension(path, ".png"));
-
-    OSResults osr;
-    //tessHelper.GetOrientation(&osr);
+    //tessHelper.SaveThresholdImage(ReplaceExtension(path, ".png"));
     
     SimpleTestResult testResult(path, osr.best_result.orientation_id);
     testResult.mScores.push_back(osr.best_result.sconfidence);
@@ -105,13 +147,13 @@ MY_APP_PROCESSFILE(TestOcr, path)
     simpleStat.Add(testResult);
     
     std::vector<cv::Rect> regionRects;
-    tessHelper.GetResultRects(TessHelper::OPTION_RECTS::Region, regionRects);
+    tessHelper.GetResultRects(TessHelper::OPTION_RECTS::Textline, regionRects);
     std::vector<cv::Rect> textLineRects;
-    tessHelper.GetResultRects(TessHelper::OPTION_RECTS::Textline, textLineRects);
+    tessHelper.GetResultRects(TessHelper::OPTION_RECTS::Component, textLineRects);
     tessHelper.Clear();
     
     Mat tmp;
-    resize(src0, tmp, Size(src0.cols * 9 / 5, src0.rows * 9 / 5));
+    resize(src0, tmp, Size(src0.cols * scale, src0.rows * scale));
     int thickness = MAX(src0.cols / 400, 1);
     
     for (int k=0; k<regionRects.size(); k++)

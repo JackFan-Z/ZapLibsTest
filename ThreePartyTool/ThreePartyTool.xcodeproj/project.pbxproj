@@ -31,6 +31,7 @@
 		545B45781B6B265900049AE6 /* libopencv_flann.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E5BD1B3142670087AC5D /* libopencv_flann.3.0.0.dylib */; };
 		545B45791B6B265D00049AE6 /* libopencv_objdetect.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E5BC1B3142670087AC5D /* libopencv_objdetect.3.0.0.dylib */; };
 		545B457B1B6B266200049AE6 /* libopencv_calib3d.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 545B457A1B6B266200049AE6 /* libopencv_calib3d.3.0.0.dylib */; };
+		54A7C4321B76F85E009937FF /* CardOcrResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54A7C4311B76F85E009937FF /* CardOcrResult.cpp */; };
 		54B881541B705B4E000BFDC4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54B881531B705B4E000BFDC4 /* main.cpp */; };
 		54B888F41B705B69000BFDC4 /* libtesseract.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B881691B705B64000BFDC4 /* libtesseract.3.dylib */; };
 		54B888F51B705B69000BFDC4 /* libtesseract.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B8816A1B705B64000BFDC4 /* libtesseract.a */; };
@@ -982,6 +983,7 @@
 		545B456C1B6B1F9100049AE6 /* TestCardDetection */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestCardDetection; sourceTree = BUILT_PRODUCTS_DIR; };
 		545B456E1B6B1F9100049AE6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		545B457A1B6B266200049AE6 /* libopencv_calib3d.3.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_calib3d.3.0.0.dylib; path = ../../../../../../usr/local/lib/libopencv_calib3d.3.0.0.dylib; sourceTree = "<group>"; };
+		54A7C4311B76F85E009937FF /* CardOcrResult.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CardOcrResult.cpp; sourceTree = "<group>"; };
 		54B881511B705B4E000BFDC4 /* Tesseract_Source */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tesseract_Source; sourceTree = BUILT_PRODUCTS_DIR; };
 		54B881531B705B4E000BFDC4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		54B881591B705B64000BFDC4 /* aclocal.m4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aclocal.m4; sourceTree = "<group>"; };
@@ -3488,6 +3490,7 @@
 			children = (
 				545245471B301BAA00610FA8 /* main.cpp */,
 				5410E5A81B303AC80087AC5D /* CardOcrResult.h */,
+				54A7C4311B76F85E009937FF /* CardOcrResult.cpp */,
 			);
 			name = TestOcr;
 			path = ThreePartyTool;
@@ -6150,6 +6153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				545245481B301BAA00610FA8 /* main.cpp in Sources */,
+				54A7C4321B76F85E009937FF /* CardOcrResult.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6746,6 +6750,7 @@
 				54B881571B705B4E000BFDC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
