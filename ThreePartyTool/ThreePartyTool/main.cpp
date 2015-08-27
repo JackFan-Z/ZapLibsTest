@@ -30,10 +30,10 @@ using namespace cv;
 
 
 SimpleStat simpleStat;
-//MY_APP(TestOcr, "/Users/jackf/Downloads/TestImages/0810_CardOcr");
+MY_APP(TestOcr, "/Users/jackf/Downloads/TestImages/0810_CardOcr");
 //MY_APP(TestOcr, "/Users/jackf/Dropbox/Work/TestImage/0810");
-MY_APP(TestOcr, "/Users/jackf/Dropbox/Work/TestImage/0718");
-//MY_APP(TestOcr, "/Users/jackf/Downloads/TestImages/0810_OSD/0718");
+//MY_APP(TestOcr, "/Users/jackf/Dropbox/Work/TestImage/0718");
+//MY_APP(TestOcr, "/Users/jackf/Downloads/TestImages/0803");
 
 
 bool progressJavaCallback(void* progress_this, int progress, int left, int right,
@@ -84,6 +84,13 @@ MY_APP_INIT(TestOcr, intParam)
     tess->GetVariableAsString("enable_new_segsearch", &value);
     LOG_D("enable_new_segsearch=%s", value.c_str());
     
+    //tessHelper.SetVariable("textord_show_blobs", "true");
+    //tessHelper.SetVariable("textord_show_boxes", "true");
+//    tessHelper.SetVariable("tessedit_dump_choices", "1");
+//    tessHelper.SetVariable("debug_noise_removal", "1");
+//    tessHelper.SetVariable("classify_debug_level", "1");
+//    tessHelper.SetVariable("segsearch_debug_level", "1" );
+    
     tessHelper.SetProgressCallback(progressJavaCallback);
     tessHelper.SetCancelCallback(cancelFunc);
     
@@ -104,6 +111,12 @@ MY_APP_PROCESSFILE(TestOcr, path)
         LOG_D("The file is skipped");
         return 0;
     }
+    static int idx = 0;
+    if (idx++ > 0)
+    {
+        LOG_D("Skipped");
+        return 0;
+    }
     
     tesseract::TessBaseAPI* tess = tessHelper.GetTess();
     tess->SetOutputName(ReplaceExtension(path, ".txt").c_str());
@@ -117,7 +130,7 @@ MY_APP_PROCESSFILE(TestOcr, path)
     TIME_MEASURE_BEGIN
 #if 1
     float scale = 1.8f;
-    tessHelper.RunCvOcr(src0, finalResult, 70);
+    tessHelper.RunCvOcr(src0, finalResult, 70, scale);
 #else
     Mat gray;
     GetGrayImage(src0, gray, false);
@@ -147,7 +160,7 @@ MY_APP_PROCESSFILE(TestOcr, path)
     simpleStat.Add(testResult);
     
     std::vector<cv::Rect> regionRects;
-    tessHelper.GetResultRects(TessHelper::OPTION_RECTS::Textline, regionRects);
+    tessHelper.GetResultRects(TessHelper::OPTION_RECTS::Word, regionRects);
     std::vector<cv::Rect> textLineRects;
     tessHelper.GetResultRects(TessHelper::OPTION_RECTS::Component, textLineRects);
     tessHelper.Clear();
@@ -166,7 +179,7 @@ MY_APP_PROCESSFILE(TestOcr, path)
     DrawRects(tmp, regionRects, Scalar(255,100,0), thickness);
     DrawRects(tmp, textLineRects, Scalar(0,255,0), thickness);
     ImShow("rects", tmp);
-    //imwrite("/Users/jackf/Downloads/TestImages/0803/BadForAddress_1.jpg", tmp);
+    //imwrite("/Users/jackf/Downloads/TestImages/0817/Bad-2.jpg", tmp);
     key = waitKey(0);
     return key;
 }
