@@ -31,6 +31,19 @@
 		545B45781B6B265900049AE6 /* libopencv_flann.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E5BD1B3142670087AC5D /* libopencv_flann.3.0.0.dylib */; };
 		545B45791B6B265D00049AE6 /* libopencv_objdetect.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E5BC1B3142670087AC5D /* libopencv_objdetect.3.0.0.dylib */; };
 		545B457B1B6B266200049AE6 /* libopencv_calib3d.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 545B457A1B6B266200049AE6 /* libopencv_calib3d.3.0.0.dylib */; };
+		5486B0D51B8FF6E3004720D5 /* CardDetectionResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5486B0D31B8FF6E3004720D5 /* CardDetectionResult.cpp */; };
+		5486B0D61B8FF6E3004720D5 /* cdmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5486B0D41B8FF6E3004720D5 /* cdmain.cpp */; };
+		5486B0D71B900460004720D5 /* ZapLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E87E1B316A5A0087AC5D /* ZapLib.framework */; };
+		5486B0D81B9005DA004720D5 /* libopencv_calib3d.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 545B457A1B6B266200049AE6 /* libopencv_calib3d.3.0.0.dylib */; };
+		5486B0D91B9005E0004720D5 /* libopencv_video.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E5B61B3142670087AC5D /* libopencv_video.3.0.0.dylib */; };
+		5486B0DA1B9005E4004720D5 /* libopencv_photo.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E5BB1B3142670087AC5D /* libopencv_photo.3.0.0.dylib */; };
+		5486B0DB1B9005E7004720D5 /* libopencv_objdetect.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E5BC1B3142670087AC5D /* libopencv_objdetect.3.0.0.dylib */; };
+		5486B0DC1B9005EA004720D5 /* libopencv_flann.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E5BD1B3142670087AC5D /* libopencv_flann.3.0.0.dylib */; };
+		5486B0DD1B9005ED004720D5 /* libopencv_highgui.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E5BE1B3142670087AC5D /* libopencv_highgui.3.0.0.dylib */; };
+		5486B0DE1B9005F6004720D5 /* libopencv_imgcodecs.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E5BF1B3142670087AC5D /* libopencv_imgcodecs.3.0.0.dylib */; };
+		5486B0DF1B9005FA004720D5 /* libopencv_imgproc.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E5C01B3142670087AC5D /* libopencv_imgproc.3.0.0.dylib */; };
+		5486B0E01B9005FD004720D5 /* libopencv_core.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E5C11B3142670087AC5D /* libopencv_core.3.0.0.dylib */; };
+		5486B0E11B900600004720D5 /* libopencv_features2d.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E5C21B3142670087AC5D /* libopencv_features2d.3.0.0.dylib */; };
 		54A7C4321B76F85E009937FF /* CardOcrResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54A7C4311B76F85E009937FF /* CardOcrResult.cpp */; };
 		54B881541B705B4E000BFDC4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54B881531B705B4E000BFDC4 /* main.cpp */; };
 		54B888F41B705B69000BFDC4 /* libtesseract.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B881691B705B64000BFDC4 /* libtesseract.3.dylib */; };
@@ -893,6 +906,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		5486B0C91B8FF55C004720D5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		54B8814F1B705B4E000BFDC4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -983,6 +1005,10 @@
 		545B456C1B6B1F9100049AE6 /* TestCardDetection */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestCardDetection; sourceTree = BUILT_PRODUCTS_DIR; };
 		545B456E1B6B1F9100049AE6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		545B457A1B6B266200049AE6 /* libopencv_calib3d.3.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_calib3d.3.0.0.dylib; path = ../../../../../../usr/local/lib/libopencv_calib3d.3.0.0.dylib; sourceTree = "<group>"; };
+		5486B0CB1B8FF55C004720D5 /* TestCardDetectDB */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestCardDetectDB; sourceTree = BUILT_PRODUCTS_DIR; };
+		5486B0D21B8FF6E3004720D5 /* CardDetectionResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardDetectionResult.h; sourceTree = "<group>"; };
+		5486B0D31B8FF6E3004720D5 /* CardDetectionResult.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CardDetectionResult.cpp; sourceTree = "<group>"; };
+		5486B0D41B8FF6E3004720D5 /* cdmain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cdmain.cpp; sourceTree = "<group>"; };
 		54A7C4311B76F85E009937FF /* CardOcrResult.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CardOcrResult.cpp; sourceTree = "<group>"; };
 		54B881511B705B4E000BFDC4 /* Tesseract_Source */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tesseract_Source; sourceTree = BUILT_PRODUCTS_DIR; };
 		54B881531B705B4E000BFDC4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -2909,6 +2935,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5486B0C81B8FF55C004720D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5486B0D71B900460004720D5 /* ZapLib.framework in Frameworks */,
+				5486B0D91B9005E0004720D5 /* libopencv_video.3.0.0.dylib in Frameworks */,
+				5486B0D81B9005DA004720D5 /* libopencv_calib3d.3.0.0.dylib in Frameworks */,
+				5486B0DB1B9005E7004720D5 /* libopencv_objdetect.3.0.0.dylib in Frameworks */,
+				5486B0DA1B9005E4004720D5 /* libopencv_photo.3.0.0.dylib in Frameworks */,
+				5486B0DD1B9005ED004720D5 /* libopencv_highgui.3.0.0.dylib in Frameworks */,
+				5486B0DC1B9005EA004720D5 /* libopencv_flann.3.0.0.dylib in Frameworks */,
+				5486B0DF1B9005FA004720D5 /* libopencv_imgproc.3.0.0.dylib in Frameworks */,
+				5486B0E01B9005FD004720D5 /* libopencv_core.3.0.0.dylib in Frameworks */,
+				5486B0E11B900600004720D5 /* libopencv_features2d.3.0.0.dylib in Frameworks */,
+				5486B0DE1B9005F6004720D5 /* libopencv_imgcodecs.3.0.0.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		54B8814E1B705B4E000BFDC4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -3471,6 +3515,7 @@
 				545245461B301BAA00610FA8 /* TestOcr */,
 				545B456D1B6B1F9100049AE6 /* TestCardDetection */,
 				54B881521B705B4E000BFDC4 /* Tesseract_Source */,
+				5486B0CC1B8FF55C004720D5 /* TestCardDetectDB */,
 				545245451B301BAA00610FA8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -3481,6 +3526,7 @@
 				545245441B301BAA00610FA8 /* TestOcr */,
 				545B456C1B6B1F9100049AE6 /* TestCardDetection */,
 				54B881511B705B4E000BFDC4 /* Tesseract_Source */,
+				5486B0CB1B8FF55C004720D5 /* TestCardDetectDB */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3647,6 +3693,16 @@
 				545B456E1B6B1F9100049AE6 /* main.cpp */,
 			);
 			path = TestCardDetection;
+			sourceTree = "<group>";
+		};
+		5486B0CC1B8FF55C004720D5 /* TestCardDetectDB */ = {
+			isa = PBXGroup;
+			children = (
+				5486B0D21B8FF6E3004720D5 /* CardDetectionResult.h */,
+				5486B0D31B8FF6E3004720D5 /* CardDetectionResult.cpp */,
+				5486B0D41B8FF6E3004720D5 /* cdmain.cpp */,
+			);
+			path = TestCardDetectDB;
 			sourceTree = "<group>";
 		};
 		54B881521B705B4E000BFDC4 /* Tesseract_Source */ = {
@@ -6091,6 +6147,23 @@
 			productReference = 545B456C1B6B1F9100049AE6 /* TestCardDetection */;
 			productType = "com.apple.product-type.tool";
 		};
+		5486B0CA1B8FF55C004720D5 /* TestCardDetectDB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5486B0D11B8FF55C004720D5 /* Build configuration list for PBXNativeTarget "TestCardDetectDB" */;
+			buildPhases = (
+				5486B0C71B8FF55C004720D5 /* Sources */,
+				5486B0C81B8FF55C004720D5 /* Frameworks */,
+				5486B0C91B8FF55C004720D5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestCardDetectDB;
+			productName = TestCardDetectDB;
+			productReference = 5486B0CB1B8FF55C004720D5 /* TestCardDetectDB */;
+			productType = "com.apple.product-type.tool";
+		};
 		54B881501B705B4E000BFDC4 /* Tesseract_Source */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54B881551B705B4E000BFDC4 /* Build configuration list for PBXNativeTarget "Tesseract_Source" */;
@@ -6123,6 +6196,9 @@
 					545B456B1B6B1F9100049AE6 = {
 						CreatedOnToolsVersion = 6.4;
 					};
+					5486B0CA1B8FF55C004720D5 = {
+						CreatedOnToolsVersion = 6.4;
+					};
 					54B881501B705B4E000BFDC4 = {
 						CreatedOnToolsVersion = 6.4;
 					};
@@ -6143,6 +6219,7 @@
 				545245431B301BAA00610FA8 /* TestOcr */,
 				545B456B1B6B1F9100049AE6 /* TestCardDetection */,
 				54B881501B705B4E000BFDC4 /* Tesseract_Source */,
+				5486B0CA1B8FF55C004720D5 /* TestCardDetectDB */,
 			);
 		};
 /* End PBXProject section */
@@ -6162,6 +6239,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				545B456F1B6B1F9100049AE6 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5486B0C71B8FF55C004720D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5486B0D51B8FF6E3004720D5 /* CardDetectionResult.cpp in Sources */,
+				5486B0D61B8FF6E3004720D5 /* cdmain.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6640,6 +6726,12 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/include",
+					/usr/local/include,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib,
@@ -6654,6 +6746,58 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Workspace1-gshyfnzmvbxkdxcndgwcbevuszla/Build/Products/Debug",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/include",
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5486B0CF1B8FF55C004720D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Workspace1-gshyfnzmvbxkdxcndgwcbevuszla/Build/Products/Debug",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/include",
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5486B0D01B8FF55C004720D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Workspace1-gshyfnzmvbxkdxcndgwcbevuszla/Build/Products/Debug",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/include",
+					/usr/local/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6742,6 +6886,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		5486B0D11B8FF55C004720D5 /* Build configuration list for PBXNativeTarget "TestCardDetectDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5486B0CF1B8FF55C004720D5 /* Debug */,
+				5486B0D01B8FF55C004720D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		54B881551B705B4E000BFDC4 /* Build configuration list for PBXNativeTarget "Tesseract_Source" */ = {
 			isa = XCConfigurationList;

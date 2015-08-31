@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>TestCardDetectDB.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>TestCardDetection.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>545B456B1B6B1F9100049AE6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5486B0CA1B8FF55C004720D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

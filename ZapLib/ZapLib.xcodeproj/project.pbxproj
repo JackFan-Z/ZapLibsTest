@@ -34,10 +34,6 @@
 		5410E8231B3168A40087AC5D /* CVUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E7EF1B3168A40087AC5D /* CVUtil.h */; };
 		5410E8261B3168A40087AC5D /* DetectAt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7F21B3168A40087AC5D /* DetectAt.cpp */; };
 		5410E8271B3168A40087AC5D /* DetectAt.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E7F31B3168A40087AC5D /* DetectAt.h */; };
-		5410E8281B3168A40087AC5D /* DetectAtJni.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7F41B3168A40087AC5D /* DetectAtJni.cpp */; };
-		5410E8291B3168A40087AC5D /* DetectCardJni.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7F51B3168A40087AC5D /* DetectCardJni.cpp */; };
-		5410E82A1B3168A40087AC5D /* DetectCardJni.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E7F61B3168A40087AC5D /* DetectCardJni.h */; };
-		5410E82B1B3168A40087AC5D /* DetectCardUnity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7F71B3168A40087AC5D /* DetectCardUnity.cpp */; };
 		5410E82C1B3168A40087AC5D /* detectrect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7F81B3168A40087AC5D /* detectrect.cpp */; };
 		5410E82D1B3168A40087AC5D /* detectrect.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5410E7F91B3168A40087AC5D /* detectrect.hpp */; };
 		5410E82E1B3168A40087AC5D /* DetectTextBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E7FA1B3168A40087AC5D /* DetectTextBlock.cpp */; };
@@ -49,18 +45,15 @@
 		5410E8341B3168A50087AC5D /* guitools_cv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E8001B3168A40087AC5D /* guitools_cv.cpp */; };
 		5410E8351B3168A50087AC5D /* guitools_cv.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8011B3168A40087AC5D /* guitools_cv.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5410E8381B3168A50087AC5D /* ImageMarker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E8041B3168A40087AC5D /* ImageMarker.cpp */; };
-		5410E8391B3168A50087AC5D /* ImageMarker.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8051B3168A40087AC5D /* ImageMarker.h */; };
+		5410E8391B3168A50087AC5D /* ImageMarker.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8051B3168A40087AC5D /* ImageMarker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5410E83A1B3168A50087AC5D /* imgtools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E8061B3168A40087AC5D /* imgtools.cpp */; };
 		5410E83B1B3168A50087AC5D /* lsd2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E8071B3168A40087AC5D /* lsd2.cpp */; };
 		5410E83C1B3168A50087AC5D /* lsd2.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8081B3168A40087AC5D /* lsd2.hpp */; };
 		5410E83D1B3168A50087AC5D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E8091B3168A40087AC5D /* main.cpp */; };
 		5410E83E1B3168A50087AC5D /* preprocessimg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E80A1B3168A40087AC5D /* preprocessimg.cpp */; };
 		5410E83F1B3168A50087AC5D /* preprocessimg.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5410E80B1B3168A40087AC5D /* preprocessimg.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
-		5410E8421B3168A50087AC5D /* StillDCardJni.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E80E1B3168A40087AC5D /* StillDCardJni.cpp */; };
-		5410E8431B3168A50087AC5D /* StillDCardJni.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E80F1B3168A40087AC5D /* StillDCardJni.h */; };
-		5410E8441B3168A50087AC5D /* StillDCardJniConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8101B3168A40087AC5D /* StillDCardJniConstant.h */; };
 		5410E8461B3168A50087AC5D /* zMyLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E8121B3168A40087AC5D /* zMyLine.cpp */; };
-		5410E8471B3168A50087AC5D /* zMyLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8131B3168A40087AC5D /* zMyLine.h */; };
+		5410E8471B3168A50087AC5D /* zMyLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8131B3168A40087AC5D /* zMyLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5410E8481B3168A50087AC5D /* zPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8141B3168A40087AC5D /* zPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5410E8491B3168A50087AC5D /* zTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8151B3168A40087AC5D /* zTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5410E85E1B3169330087AC5D /* libopencv_video.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E8501B3169330087AC5D /* libopencv_video.3.0.0.dylib */; };
@@ -137,10 +130,6 @@
 		5410E7EF1B3168A40087AC5D /* CVUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVUtil.h; sourceTree = "<group>"; };
 		5410E7F21B3168A40087AC5D /* DetectAt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DetectAt.cpp; sourceTree = "<group>"; };
 		5410E7F31B3168A40087AC5D /* DetectAt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetectAt.h; sourceTree = "<group>"; };
-		5410E7F41B3168A40087AC5D /* DetectAtJni.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DetectAtJni.cpp; sourceTree = "<group>"; };
-		5410E7F51B3168A40087AC5D /* DetectCardJni.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DetectCardJni.cpp; sourceTree = "<group>"; };
-		5410E7F61B3168A40087AC5D /* DetectCardJni.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetectCardJni.h; sourceTree = "<group>"; };
-		5410E7F71B3168A40087AC5D /* DetectCardUnity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DetectCardUnity.cpp; sourceTree = "<group>"; };
 		5410E7F81B3168A40087AC5D /* detectrect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = detectrect.cpp; sourceTree = "<group>"; };
 		5410E7F91B3168A40087AC5D /* detectrect.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = detectrect.hpp; sourceTree = "<group>"; };
 		5410E7FA1B3168A40087AC5D /* DetectTextBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DetectTextBlock.cpp; sourceTree = "<group>"; };
@@ -159,9 +148,6 @@
 		5410E8091B3168A40087AC5D /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		5410E80A1B3168A40087AC5D /* preprocessimg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = preprocessimg.cpp; sourceTree = "<group>"; };
 		5410E80B1B3168A40087AC5D /* preprocessimg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = preprocessimg.hpp; sourceTree = "<group>"; };
-		5410E80E1B3168A40087AC5D /* StillDCardJni.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StillDCardJni.cpp; sourceTree = "<group>"; };
-		5410E80F1B3168A40087AC5D /* StillDCardJni.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StillDCardJni.h; sourceTree = "<group>"; };
-		5410E8101B3168A40087AC5D /* StillDCardJniConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StillDCardJniConstant.h; sourceTree = "<group>"; };
 		5410E8121B3168A40087AC5D /* zMyLine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = zMyLine.cpp; sourceTree = "<group>"; };
 		5410E8131B3168A40087AC5D /* zMyLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zMyLine.h; sourceTree = "<group>"; };
 		5410E8141B3168A40087AC5D /* zPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zPlatform.h; sourceTree = "<group>"; };
@@ -372,10 +358,6 @@
 				5410E7EF1B3168A40087AC5D /* CVUtil.h */,
 				5410E7F21B3168A40087AC5D /* DetectAt.cpp */,
 				5410E7F31B3168A40087AC5D /* DetectAt.h */,
-				5410E7F41B3168A40087AC5D /* DetectAtJni.cpp */,
-				5410E7F51B3168A40087AC5D /* DetectCardJni.cpp */,
-				5410E7F61B3168A40087AC5D /* DetectCardJni.h */,
-				5410E7F71B3168A40087AC5D /* DetectCardUnity.cpp */,
 				5410E7F81B3168A40087AC5D /* detectrect.cpp */,
 				5410E7F91B3168A40087AC5D /* detectrect.hpp */,
 				5410E7FA1B3168A40087AC5D /* DetectTextBlock.cpp */,
@@ -394,9 +376,6 @@
 				5410E8091B3168A40087AC5D /* main.cpp */,
 				5410E80A1B3168A40087AC5D /* preprocessimg.cpp */,
 				5410E80B1B3168A40087AC5D /* preprocessimg.hpp */,
-				5410E80E1B3168A40087AC5D /* StillDCardJni.cpp */,
-				5410E80F1B3168A40087AC5D /* StillDCardJni.h */,
-				5410E8101B3168A40087AC5D /* StillDCardJniConstant.h */,
 				5410E8121B3168A40087AC5D /* zMyLine.cpp */,
 				5410E8131B3168A40087AC5D /* zMyLine.h */,
 				5410E8141B3168A40087AC5D /* zPlatform.h */,
@@ -511,7 +490,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				54A0D9441B4CC9020036CB05 /* CardTrackerDetectAt.h in Headers */,
-				5410E8431B3168A50087AC5D /* StillDCardJni.h in Headers */,
 				5410E7A11B3168780087AC5D /* TessHelper.h in Headers */,
 				5410E8231B3168A40087AC5D /* CVUtil.h in Headers */,
 				54A0D9481B4CC9020036CB05 /* Matching.h in Headers */,
@@ -532,7 +510,6 @@
 				5410E8311B3168A40087AC5D /* filetools.hpp in Headers */,
 				5410E5E81B314C630087AC5D /* ZapLib.h in Headers */,
 				5410E81C1B3168A40087AC5D /* binarizewolfjolion.h in Headers */,
-				5410E82A1B3168A40087AC5D /* DetectCardJni.h in Headers */,
 				5410E8391B3168A50087AC5D /* ImageMarker.h in Headers */,
 				5410E8771B31698A0087AC5D /* Application.h in Headers */,
 				5410E7C51B3168780087AC5D /* CvOcrImageProcess.h in Headers */,
@@ -543,7 +520,6 @@
 				54A0D9461B4CC9020036CB05 /* CardTrackerFeature.h in Headers */,
 				5410E83C1B3168A50087AC5D /* lsd2.hpp in Headers */,
 				5410E79F1B3168780087AC5D /* EmailStat.h in Headers */,
-				5410E8441B3168A50087AC5D /* StillDCardJniConstant.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,12 +627,10 @@
 			files = (
 				54A0D9451B4CC9020036CB05 /* CardTrackerFeature.cpp in Sources */,
 				5410E7CB1B3168780087AC5D /* TextConfidence.cpp in Sources */,
-				5410E82B1B3168A40087AC5D /* DetectCardUnity.cpp in Sources */,
 				5410E8461B3168A50087AC5D /* zMyLine.cpp in Sources */,
 				5410E83D1B3168A50087AC5D /* main.cpp in Sources */,
 				5410E83B1B3168A50087AC5D /* lsd2.cpp in Sources */,
 				5410E87D1B31698A0087AC5D /* SimpleStat.cpp in Sources */,
-				5410E8421B3168A50087AC5D /* StillDCardJni.cpp in Sources */,
 				5410E7C81B3168780087AC5D /* FilterOcrCardResult.cpp in Sources */,
 				5410E8301B3168A40087AC5D /* filetools.cpp in Sources */,
 				5410E8321B3168A50087AC5D /* guitools.cpp in Sources */,
@@ -664,7 +638,6 @@
 				54A0D9471B4CC9020036CB05 /* Matching.cpp in Sources */,
 				5410E7C71B3168780087AC5D /* EmailStat.cpp in Sources */,
 				5410E8261B3168A40087AC5D /* DetectAt.cpp in Sources */,
-				5410E8291B3168A40087AC5D /* DetectCardJni.cpp in Sources */,
 				5410E7C41B3168780087AC5D /* CvOcrImageProcess.cpp in Sources */,
 				5410E83E1B3168A50087AC5D /* preprocessimg.cpp in Sources */,
 				5410E81B1B3168A40087AC5D /* binarizewolfjolion.cpp in Sources */,
@@ -678,7 +651,6 @@
 				5410E82C1B3168A40087AC5D /* detectrect.cpp in Sources */,
 				5410E8341B3168A50087AC5D /* guitools_cv.cpp in Sources */,
 				5410E7C61B3168780087AC5D /* CvOrcImageContainer.cpp in Sources */,
-				5410E8281B3168A40087AC5D /* DetectAtJni.cpp in Sources */,
 				5410E7CA1B3168780087AC5D /* TessResultParseCard.cpp in Sources */,
 				5410E82E1B3168A40087AC5D /* DetectTextBlock.cpp in Sources */,
 			);

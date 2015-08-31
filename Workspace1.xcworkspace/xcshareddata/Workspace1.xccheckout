@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>689CD875-B5B2-4B0A-AA35-9793D62C4ABA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Workspace1</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4443846217AF78474DF11E50F17877DB035BC482</key>
+		<string>https://github.com/Zappointer/ZappointPlus.git</string>
+		<key>5EFDF44884927C957FAF8CB31E022B5143D97CD4</key>
+		<string>https://github.com/JackFan-Z/ZapLibsTest.git</string>
+		<key>FE9DC32827427E1D375E1B1D78EAC60836522245</key>
+		<string>github.com:Zappointer/CvDetectCard.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Workspace1.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4443846217AF78474DF11E50F17877DB035BC482</key>
+		<string>../../../androidstudio/ZappointPlus</string>
+		<key>5EFDF44884927C957FAF8CB31E022B5143D97CD4</key>
+		<string>..</string>
+		<key>FE9DC32827427E1D375E1B1D78EAC60836522245</key>
+		<string>../../../androidstudio/ZappointPlus/subm_CvDetectCard</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/JackFan-Z/ZapLibsTest.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5EFDF44884927C957FAF8CB31E022B5143D97CD4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FE9DC32827427E1D375E1B1D78EAC60836522245</string>
+			<key>IDESourceControlWCCName</key>
+			<string>subm_CvDetectCard</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5EFDF44884927C957FAF8CB31E022B5143D97CD4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Workspace1</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4443846217AF78474DF11E50F17877DB035BC482</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ZappointPlus</string>
+		</dict>
+	</array>
+</dict>
+</plist>
