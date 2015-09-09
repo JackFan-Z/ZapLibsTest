@@ -17,19 +17,21 @@ static CardTracker* gTheCardTracker = NULL;
 using namespace std;
 using namespace cv;
 
-string dir = "/Users/jackf/Downloads/TestImages/0604/raw";
+//string dir = "/Users/jackf/Downloads/TestImages/0604/raw";
 //string dir = "/Users/jackf/Dropbox/Work/TestImage/0731";
+//string dir = "/Users/jackf/GoogleDrive/Zappoint/Image\ Processing/CardDetectionDB/white";
+string dir = "/Users/jackf/Downloads/TestImages/0827_white";
 MY_APP(TestCardDetection, dir);
 
 MY_APP_INIT(TestCardDetection, intParam)
 {
-    gTheCardTracker = new CardTracker();
+    gTheCardTracker = new zp::CardTrackerFeature();
     gTheCardTracker->Init(NULL);
 #if !MOBILE_PLATFORM
     // Control the level of std::out
-    SetDebugLevel(3);
+    SetDebugLevel(1);
     // Control the color of std::out
-    //EnableXcodeColor(true);
+    EnableXcodeColor(true);
 #endif
     return 0;
 }
@@ -37,11 +39,21 @@ MY_APP_INIT(TestCardDetection, intParam)
 MY_APP_PROCESSFILE(TestCardDetection, path)
 {
     Mat src0 = imread(path);
+    if (src0.empty())
+    {
+        LOG_ERROR("Bad image: %s", path.c_str());
+        return -1;
+    }
+    ImShow("Source", src0, 600);
+    waitKey(200);
+    
     std::vector<cv::Point2f> Corners;
     bool ret = gTheCardTracker->ProcessFrame(&src0, Corners);
+    gTheCardTracker->ResetState(); // Do run tracking code
     if (ret == false)
     {
         LOG_ERROR("Fail to detect the card");
+        waitKey(0);
         return -1;
     }
     int fullFOVSize = 3200;
@@ -51,8 +63,8 @@ MY_APP_PROCESSFILE(TestCardDetection, path)
     Mat cutImage;
     CutOutCardBorder( quadImg, cutImage);
     ImShow("Result", cutImage);
-    int key;
-    key = waitKey(100);
+    int key = 0;
+    key = waitKey(0);
     return key;
 }
 

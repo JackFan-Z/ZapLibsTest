@@ -6731,6 +6731,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/include",
 					/usr/local/include,
+					/Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/ZapBase/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6752,6 +6753,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/include",
 					/usr/local/include,
+					/Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/ZapBase/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6777,6 +6779,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/include",
 					/usr/local/include,
+					/Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/ZapBase/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6798,6 +6801,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/include",
 					/usr/local/include,
+					/Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/ZapBase/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6894,6 +6898,7 @@
 				5486B0D01B8FF55C004720D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		54B881551B705B4E000BFDC4 /* Build configuration list for PBXNativeTarget "Tesseract_Source" */ = {
 			isa = XCConfigurationList;

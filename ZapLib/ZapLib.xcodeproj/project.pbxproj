@@ -54,7 +54,6 @@
 		5410E83F1B3168A50087AC5D /* preprocessimg.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5410E80B1B3168A40087AC5D /* preprocessimg.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		5410E8461B3168A50087AC5D /* zMyLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E8121B3168A40087AC5D /* zMyLine.cpp */; };
 		5410E8471B3168A50087AC5D /* zMyLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8131B3168A40087AC5D /* zMyLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5410E8481B3168A50087AC5D /* zPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8141B3168A40087AC5D /* zPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5410E8491B3168A50087AC5D /* zTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8151B3168A40087AC5D /* zTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5410E85E1B3169330087AC5D /* libopencv_video.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E8501B3169330087AC5D /* libopencv_video.3.0.0.dylib */; };
 		5410E85F1B3169330087AC5D /* libopencv_videoio.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410E8511B3169330087AC5D /* libopencv_videoio.3.0.0.dylib */; };
@@ -75,6 +74,9 @@
 		5410E87A1B31698A0087AC5D /* SimpleStat.h in Headers */ = {isa = PBXBuildFile; fileRef = 5410E8701B31698A0087AC5D /* SimpleStat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5410E87C1B31698A0087AC5D /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E8751B31698A0087AC5D /* Application.cpp */; };
 		5410E87D1B31698A0087AC5D /* SimpleStat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5410E8761B31698A0087AC5D /* SimpleStat.cpp */; };
+		542167FB1BA01A990008CD92 /* stringtool.h in Headers */ = {isa = PBXBuildFile; fileRef = 542167F81BA01A990008CD92 /* stringtool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		542167FC1BA01A990008CD92 /* threadqueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 542167F91BA01A990008CD92 /* threadqueue.h */; };
+		542167FD1BA01A990008CD92 /* zPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 542167FA1BA01A990008CD92 /* zPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54A0D9431B4CC9020036CB05 /* CardTrackerDetectAt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54A0D93D1B4CC9020036CB05 /* CardTrackerDetectAt.cpp */; };
 		54A0D9441B4CC9020036CB05 /* CardTrackerDetectAt.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A0D93E1B4CC9020036CB05 /* CardTrackerDetectAt.h */; };
 		54A0D9451B4CC9020036CB05 /* CardTrackerFeature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54A0D93F1B4CC9020036CB05 /* CardTrackerFeature.cpp */; };
@@ -82,10 +84,11 @@
 		54A0D9471B4CC9020036CB05 /* Matching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54A0D9411B4CC9020036CB05 /* Matching.cpp */; };
 		54A0D9481B4CC9020036CB05 /* Matching.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A0D9421B4CC9020036CB05 /* Matching.h */; };
 		54A0D9541B4CCA320036CB05 /* Android.mk in Resources */ = {isa = PBXBuildFile; fileRef = 54A0D94C1B4CCA320036CB05 /* Android.mk */; };
-		54A0D9551B4CCA320036CB05 /* threadqueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A0D94E1B4CCA320036CB05 /* threadqueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54A0D9561B4CCA320036CB05 /* Android.mk in Resources */ = {isa = PBXBuildFile; fileRef = 54A0D9511B4CCA320036CB05 /* Android.mk */; };
 		54A0D9571B4CCA320036CB05 /* threadqueue.c in Sources */ = {isa = PBXBuildFile; fileRef = 54A0D9531B4CCA320036CB05 /* threadqueue.c */; };
 		54A0D9591B4CCAAB0036CB05 /* libopencv_calib3d.3.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A0D9581B4CCAAB0036CB05 /* libopencv_calib3d.3.0.0.dylib */; };
+		54EA97281B96A42100D7BA49 /* RectInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54EA97261B96A42100D7BA49 /* RectInfo.cpp */; };
+		54EA97291B96A42100D7BA49 /* RectInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 54EA97271B96A42100D7BA49 /* RectInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54FFBF241B608CBA00FCA70F /* stringtool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54FFBF231B608CBA00FCA70F /* stringtool.cpp */; };
 /* End PBXBuildFile section */
 
@@ -150,7 +153,6 @@
 		5410E80B1B3168A40087AC5D /* preprocessimg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = preprocessimg.hpp; sourceTree = "<group>"; };
 		5410E8121B3168A40087AC5D /* zMyLine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = zMyLine.cpp; sourceTree = "<group>"; };
 		5410E8131B3168A40087AC5D /* zMyLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zMyLine.h; sourceTree = "<group>"; };
-		5410E8141B3168A40087AC5D /* zPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zPlatform.h; sourceTree = "<group>"; };
 		5410E8151B3168A40087AC5D /* zTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zTypes.h; sourceTree = "<group>"; };
 		5410E8501B3169330087AC5D /* libopencv_video.3.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_video.3.0.0.dylib; path = /Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib/libopencv_video.3.0.0.dylib; sourceTree = "<absolute>"; };
 		5410E8511B3169330087AC5D /* libopencv_videoio.3.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_videoio.3.0.0.dylib; path = /Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/../../../../../../usr/local/lib/libopencv_videoio.3.0.0.dylib; sourceTree = "<absolute>"; };
@@ -171,6 +173,9 @@
 		5410E8701B31698A0087AC5D /* SimpleStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleStat.h; sourceTree = "<group>"; };
 		5410E8751B31698A0087AC5D /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		5410E8761B31698A0087AC5D /* SimpleStat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleStat.cpp; sourceTree = "<group>"; };
+		542167F81BA01A990008CD92 /* stringtool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringtool.h; sourceTree = "<group>"; };
+		542167F91BA01A990008CD92 /* threadqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = threadqueue.h; sourceTree = "<group>"; };
+		542167FA1BA01A990008CD92 /* zPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zPlatform.h; sourceTree = "<group>"; };
 		54A0D93D1B4CC9020036CB05 /* CardTrackerDetectAt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CardTrackerDetectAt.cpp; sourceTree = "<group>"; };
 		54A0D93E1B4CC9020036CB05 /* CardTrackerDetectAt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardTrackerDetectAt.h; sourceTree = "<group>"; };
 		54A0D93F1B4CC9020036CB05 /* CardTrackerFeature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CardTrackerFeature.cpp; sourceTree = "<group>"; };
@@ -178,12 +183,12 @@
 		54A0D9411B4CC9020036CB05 /* Matching.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matching.cpp; sourceTree = "<group>"; };
 		54A0D9421B4CC9020036CB05 /* Matching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matching.h; sourceTree = "<group>"; };
 		54A0D94C1B4CCA320036CB05 /* Android.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Android.mk; sourceTree = "<group>"; };
-		54A0D94E1B4CCA320036CB05 /* threadqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = threadqueue.h; sourceTree = "<group>"; };
 		54A0D9511B4CCA320036CB05 /* Android.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Android.mk; sourceTree = "<group>"; };
 		54A0D9531B4CCA320036CB05 /* threadqueue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = threadqueue.c; sourceTree = "<group>"; };
 		54A0D9581B4CCAAB0036CB05 /* libopencv_calib3d.3.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_calib3d.3.0.0.dylib; path = ../../../../../../usr/local/lib/libopencv_calib3d.3.0.0.dylib; sourceTree = "<group>"; };
+		54EA97261B96A42100D7BA49 /* RectInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RectInfo.cpp; sourceTree = "<group>"; };
+		54EA97271B96A42100D7BA49 /* RectInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectInfo.h; sourceTree = "<group>"; };
 		54FFBF231B608CBA00FCA70F /* stringtool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stringtool.cpp; sourceTree = "<group>"; };
-		54FFBF251B608E6900FCA70F /* stringtool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stringtool.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -378,8 +383,9 @@
 				5410E80B1B3168A40087AC5D /* preprocessimg.hpp */,
 				5410E8121B3168A40087AC5D /* zMyLine.cpp */,
 				5410E8131B3168A40087AC5D /* zMyLine.h */,
-				5410E8141B3168A40087AC5D /* zPlatform.h */,
 				5410E8151B3168A40087AC5D /* zTypes.h */,
+				54EA97261B96A42100D7BA49 /* RectInfo.cpp */,
+				54EA97271B96A42100D7BA49 /* RectInfo.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -436,25 +442,35 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		542167F61BA01A990008CD92 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				542167F71BA01A990008CD92 /* ZapBase */,
+			);
+			name = include;
+			path = "../../../../xcodePrj/Zappoint-iOS/Modules/CvDetectCard/ZapBase/include";
+			sourceTree = "<group>";
+		};
+		542167F71BA01A990008CD92 /* ZapBase */ = {
+			isa = PBXGroup;
+			children = (
+				542167F81BA01A990008CD92 /* stringtool.h */,
+				542167F91BA01A990008CD92 /* threadqueue.h */,
+				542167FA1BA01A990008CD92 /* zPlatform.h */,
+			);
+			path = ZapBase;
+			sourceTree = "<group>";
+		};
 		54A0D94B1B4CCA320036CB05 /* ZapBase */ = {
 			isa = PBXGroup;
 			children = (
+				542167F61BA01A990008CD92 /* include */,
 				54A0D94C1B4CCA320036CB05 /* Android.mk */,
-				54A0D94D1B4CCA320036CB05 /* include */,
 				54A0D94F1B4CCA320036CB05 /* platform */,
 				54A0D9521B4CCA320036CB05 /* src */,
 			);
 			name = ZapBase;
 			path = ../../../../androidstudio/ZappointPlus/subm_CvDetectCard/ZapBase;
-			sourceTree = "<group>";
-		};
-		54A0D94D1B4CCA320036CB05 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				54A0D94E1B4CCA320036CB05 /* threadqueue.h */,
-				54FFBF251B608E6900FCA70F /* stringtool.h */,
-			);
-			path = include;
 			sourceTree = "<group>";
 		};
 		54A0D94F1B4CCA320036CB05 /* platform */ = {
@@ -497,7 +513,6 @@
 				5410E7A31B3168780087AC5D /* TextConfidence.h in Headers */,
 				5410E83F1B3168A50087AC5D /* preprocessimg.hpp in Headers */,
 				5410E79E1B3168780087AC5D /* CvOrcImageContainer.h in Headers */,
-				5410E8481B3168A50087AC5D /* zPlatform.h in Headers */,
 				5410E8221B3168A40087AC5D /* CardTracker.h in Headers */,
 				5410E8471B3168A50087AC5D /* zMyLine.h in Headers */,
 				5410E8491B3168A50087AC5D /* zTypes.h in Headers */,
@@ -506,15 +521,18 @@
 				5410E8781B31698A0087AC5D /* factory.h in Headers */,
 				5410E8791B31698A0087AC5D /* optionparser.h in Headers */,
 				5410E8351B3168A50087AC5D /* guitools_cv.h in Headers */,
-				54A0D9551B4CCA320036CB05 /* threadqueue.h in Headers */,
 				5410E8311B3168A40087AC5D /* filetools.hpp in Headers */,
 				5410E5E81B314C630087AC5D /* ZapLib.h in Headers */,
 				5410E81C1B3168A40087AC5D /* binarizewolfjolion.h in Headers */,
 				5410E8391B3168A50087AC5D /* ImageMarker.h in Headers */,
+				542167FC1BA01A990008CD92 /* threadqueue.h in Headers */,
 				5410E8771B31698A0087AC5D /* Application.h in Headers */,
 				5410E7C51B3168780087AC5D /* CvOcrImageProcess.h in Headers */,
+				542167FB1BA01A990008CD92 /* stringtool.h in Headers */,
 				5410E82F1B3168A40087AC5D /* DetectTextBlock.h in Headers */,
+				542167FD1BA01A990008CD92 /* zPlatform.h in Headers */,
 				5410E7A01B3168780087AC5D /* FilterOcrCardResult.h in Headers */,
+				54EA97291B96A42100D7BA49 /* RectInfo.h in Headers */,
 				5410E7A21B3168780087AC5D /* TessResultParseCard.h in Headers */,
 				5410E8271B3168A40087AC5D /* DetectAt.h in Headers */,
 				54A0D9461B4CC9020036CB05 /* CardTrackerFeature.h in Headers */,
@@ -642,6 +660,7 @@
 				5410E83E1B3168A50087AC5D /* preprocessimg.cpp in Sources */,
 				5410E81B1B3168A40087AC5D /* binarizewolfjolion.cpp in Sources */,
 				5410E87C1B31698A0087AC5D /* Application.cpp in Sources */,
+				54EA97281B96A42100D7BA49 /* RectInfo.cpp in Sources */,
 				54FFBF241B608CBA00FCA70F /* stringtool.cpp in Sources */,
 				5410E83A1B3168A50087AC5D /* imgtools.cpp in Sources */,
 				54A0D9571B4CCA320036CB05 /* threadqueue.c in Sources */,
@@ -781,6 +800,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include/leptonica,
+					/usr/local/include/tesseract,
+					/usr/local/include,
+					/Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/ZapBase/include,
+				);
 				INFOPLIST_FILE = ZapLib/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
@@ -802,6 +829,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include/leptonica,
+					/usr/local/include/tesseract,
+					/usr/local/include,
+					/Users/jackf/Documents/androidstudio/ZappointPlus/subm_CvDetectCard/ZapBase/include,
+				);
 				INFOPLIST_FILE = ZapLib/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
